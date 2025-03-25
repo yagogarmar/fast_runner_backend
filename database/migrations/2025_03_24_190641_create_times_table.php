@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreign('level_id')->references('id')->on('levels');
 
             $table->unsignedBigInteger('time'); // EN MS 
+            $table->boolean('completed');
             $table->timestamps();
         });
     }
