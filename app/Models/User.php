@@ -4,6 +4,8 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
@@ -19,7 +21,7 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
         'password',
     ];
@@ -46,4 +48,30 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    // FUNCIONES DE AUTENTIFICACION 🦺
+
+    public function login(){
+
+    }
+
+    public function register(){
+
+    }
+
+
+    // RELACIONES 🔀
+
+    public function times(): HasMany
+    {
+        return $this->hasMany(Time::class);
+    }
+
+    public function products(): BelongsToMany
+    {
+        return $this->belongsToMany(Product::class, 'inventory');
+    }
+
+
 }
