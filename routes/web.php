@@ -1,7 +1,28 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+
+// VISTAS
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+
+
+
+
+Route::post('/login', [AuthController::class, 'webLogin']);
+
+Route::middleware('auth')->group(function() {
+ 
+    Route::get('/perfil', function () {
+        return view('perfil');
+    });
+
+
+    Route::any('/logout', [AuthController::class, 'webLogout']);
+
+
 });
