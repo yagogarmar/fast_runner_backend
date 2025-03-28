@@ -26,6 +26,7 @@ const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
         }
     })
     .then(data => {
+        window.location = window.location.origin + "/perfil"
         console.log(data);
     })
     .catch(error => console.error("Error:", error));
