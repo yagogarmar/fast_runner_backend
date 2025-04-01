@@ -22,4 +22,9 @@ class Levels extends Model
         return $this->hasMany(Time::class);
     }
 
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class);
+    }
+
 }

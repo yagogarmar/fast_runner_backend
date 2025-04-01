@@ -77,4 +77,24 @@ class AuthController extends Controller
             "message" => "Sesion cerrada correctamente"
         ], 200);
     }
+
+    public function apiRegister(Request $request){
+
+        $user = User::create([
+            "username" => $request->username,
+            "email" => $request->email,
+            "password" => $request->password
+        ]);
+
+        if($user){
+            return response()->json([
+                "message" => "Usuaeio creado correctamente",
+                "user" => $user
+            ], 201);
+        }
+
+        return response()->json([
+            "message" => "Ha ocurrido un error",
+        ], 400);
+    }
 }
