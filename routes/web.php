@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LevelsController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TimesController;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +22,9 @@ Route::get('/csrf-token', function (Request $request) {
 Route::post('/login',           [AuthController::class, 'webLogin']);
 Route::post('/register',        [AuthController::class, 'apiRegister']);
 
+Route::get('/levels', [LevelsController::class , 'get']);
+Route::get('/show/{id}', [LevelsController::class , 'show']);
+
 Route::group(['prefix' => 'time'], function () {
     Route::get('/get/{id}',          [TimesController::class, 'get'] );
 });
@@ -32,5 +37,9 @@ Route::middleware('auth')->group(function() {
 
     Route::any('/logout', [AuthController::class, 'webLogout']);
 
+    Route::post('/comment',           [LevelsController::class, 'comment']);
 
+    Route::group(['prefix' => 'store'], function () {
+        Route::get('/products',          [StoreController::class, 'get'] );
+    });
 });

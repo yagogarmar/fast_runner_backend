@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             LevelSeeder::class,
             TimeSeeder::class,
+            CommentSeeder::class
         ]);
     }
 }

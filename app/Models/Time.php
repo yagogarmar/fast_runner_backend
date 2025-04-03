@@ -29,6 +29,6 @@ class Time extends Model
 
     public function level(): BelongsTo
     {
-        return $this->belongsTo(Levels::class);
+        return $this->belongsTo(Level::class);
     }
 }

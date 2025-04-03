@@ -33,7 +33,7 @@ class TimesController extends Controller
 
     public function get(Request $request, $id){
         $times = null;
-
+        
         if($request->mytmies){
             $user_id = $request->user()->id;
             $times = Time::where('level_id', $id)->where('user_id', $user_id)->paginate(3);

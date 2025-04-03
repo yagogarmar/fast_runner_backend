@@ -88,7 +88,7 @@ class AuthController extends Controller
 
         if($user){
             return response()->json([
-                "message" => "Usuaeio creado correctamente",
+                "message" => "Usuario creado correctamente",
                 "user" => $user
             ], 201);
         }
