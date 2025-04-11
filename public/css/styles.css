@@ -29,12 +29,37 @@ body{
 }
 
 .cont_degradado{
-    background: linear-gradient(45deg, #76BDFF, #76D6FF);
-    position: relative;
- 
-    height: 100%;   
-    overflow: hidden;
-    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);      
+    background: linear-gradient(45deg, #76BDFF, #76D6FF); 
+    height: 100%;
+    
+    border-radius: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+.cont_degradado p{
+    position: absolute;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    left: 0;
+    
+
+}
+
+.texto{
+    position: absolute;
+    left: 50%;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: center;
+    font-size: 2em;
+    color: white;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
 .cont_login{
@@ -99,4 +124,23 @@ body{
     font-size: 1.35rem;
     font-weight: 500;
 
+}
+
+.loginbody{
+    overflow: hidden;
+}
+
+
+
+/* MARQUEE */
+.marquee {
+    overflow: hidden;
+    display: flex;
+}
+  
+.marquee h1{
+    font-size: 3rem;
+    white-space: nowrap;
+    padding-right: 100px;
+    text-transform: uppercase
 }

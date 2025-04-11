@@ -13,7 +13,9 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-
+Route::get('/', function () {
+    return view('home');
+})->name('home');
 
 Route::get('/csrf-token', function (Request $request) {
     return response()->json(['csrf_token' => csrf_token()]);
@@ -41,5 +43,7 @@ Route::middleware('auth')->group(function() {
 
     Route::group(['prefix' => 'store'], function () {
         Route::get('/products',          [StoreController::class, 'get'] );
+        Route::get('/products/{id}',          [StoreController::class, 'show'] );
+        Route::get('/buy/{id}',          [StoreController::class, 'buy'] );
     });
 });
