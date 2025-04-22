@@ -4,8 +4,10 @@
 @section('content')
 
 <body>
+    <x-navbar></x-navbar>
+
     <div class="marquee">
-        <h1> FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER </h1>
+        <h1>FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER</h1>
     </div>
 
 

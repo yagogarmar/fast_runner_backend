@@ -6,7 +6,7 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TimesController;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Level;
 
 // VISTAS
 Route::get('/login', function () {
@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/levels', function () {
+    $levels = Level::all();
+
+    return view('levels', compact('levels'));
+})->name('levels');
+
+
 Route::get('/csrf-token', function (Request $request) {
     return response()->json(['csrf_token' => csrf_token()]);
 });
@@ -24,8 +31,8 @@ Route::get('/csrf-token', function (Request $request) {
 Route::post('/login',           [AuthController::class, 'webLogin']);
 Route::post('/register',        [AuthController::class, 'apiRegister']);
 
-Route::get('/levels', [LevelsController::class , 'get']);
-Route::get('/show/{id}', [LevelsController::class , 'show']);
+Route::get('/level', [LevelsController::class , 'get']);
+Route::get('/level/{id}', [LevelsController::class , 'show']);
 
 Route::group(['prefix' => 'time'], function () {
     Route::get('/get/{id}',          [TimesController::class, 'get'] );

@@ -1,8 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     color: white;
@@ -10,12 +9,20 @@
     font-family: "Poppins", sans-serif;
 }
 
+.linea_central {
+    width: 3px;
+    height: 100vh;
+    position: absolute;
+    background-color: red;
+    right: 50vw;
+}
 
-body{
+
+body {
     background-color: #393939;
 }
 
-.cont_global{
+.cont_global {
 
     height: 100vh;
     width: 100%;
@@ -23,15 +30,15 @@ body{
     flex-direction: row;
 }
 
-.cont_logo{
+.cont_logo {
     width: 50%;
-    padding: 1.375rem ;
+    padding: 1.375rem;
 }
 
-.cont_degradado{
-    background: linear-gradient(45deg, #76BDFF, #76D6FF); 
+.cont_degradado {
+    background: linear-gradient(45deg, #76BDFF, #76D6FF);
     height: 100%;
-    
+
     border-radius: 35px;
 
     display: flex;
@@ -41,17 +48,18 @@ body{
 
 
 }
-.cont_degradado p{
+
+.cont_degradado p {
     position: absolute;
     white-space: nowrap;
     transform: rotate(90deg);
     transform-origin: top left;
     left: 0;
-    
+
 
 }
 
-.texto{
+.texto {
     position: absolute;
     left: 50%;
     transform: rotate(-90deg) translateX(-50%);
@@ -62,24 +70,25 @@ body{
     pointer-events: none;
 }
 
-.cont_login{
+.cont_login {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.cont_login h1{
+
+.cont_login h1 {
     margin-bottom: 3rem;
     font-size: 3.3rem;
 }
 
-.loginInput{
+.loginInput {
     border: none;
     background-color: #575757;
     text-align: center;
     color: WHITE;
-    border-radius: 0.813rem ;
+    border-radius: 0.813rem;
     padding: 10px;
 
     width: 25.200rem;
@@ -89,21 +98,22 @@ body{
     margin-bottom: 3rem;
     font-weight: 400;
 }
-.loginInput::placeholder{
+
+.loginInput::placeholder {
     font-family: "Lexend", sans-serif;
     font-size: 1.5rem;
     color: #C0C0C0;
 }
 
-.cont_login button{
+.cont_login button {
     width: 13.600rem;
     height: 2.7rem;
     border: none;
-    
+
     border-radius: 15px;
 }
 
-.loginButton{
+.loginButton {
     background-color: #76D6FF;
     color: #393939;
     font-family: "Lexend", sans-serif;
@@ -113,10 +123,10 @@ body{
     font-weight: 500;
 
     margin-bottom: 1rem;
-    
+
 }
 
-.goregisterButton{
+.goregisterButton {
     background-color: #575757;
     color: #76D6FF;
     font-family: "Lexend", sans-serif;
@@ -126,10 +136,98 @@ body{
 
 }
 
-.loginbody{
+.loginbody {
     overflow: hidden;
 }
 
+/* NAVBAR */
+.navbar {
+    height: 6rem;
+    width: 100vw;
+    padding: 1rem;
+
+}
+
+.navbar_test {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #76BDFF, #76D6FF);
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.opt_navbar {
+    text-decoration: none;
+
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+
+}
+
+.text_navbar {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    margin: 0;
+
+}
+
+.navbar_selected {
+    font-size: 2.7rem;
+
+
+}
+
+/* LEVELS */
+.cont_levels {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* espacio entre los divs */
+    padding: 10px;
+
+    padding-right: 10rem;
+    padding-left: 10rem;
+
+    margin-top: 2rem;
+}
+
+
+
+.level {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3rem;
+}
+
+.level_url {
+    background: linear-gradient(45deg, #76BDFF, #76D6FF);
+    height: 17.625rem;
+    width: 17.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1rem;
+    text-decoration: none;
+
+}
+
+.level_url p {
+    font-size: 3rem;
+    font-weight: 700;
+}
 
 
 /* MARQUEE */
@@ -137,10 +235,12 @@ body{
     overflow: hidden;
     display: flex;
 }
-  
-.marquee h1{
-    font-size: 3rem;
+
+.marquee h1 {
+    font-size: 1.6em;
     white-space: nowrap;
-    padding-right: 100px;
-    text-transform: uppercase
+    padding-right: 1rem;
+    text-transform: uppercase;
+
+
 }
