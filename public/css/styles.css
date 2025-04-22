@@ -92,7 +92,7 @@ body{
 }
 
 .goregisterButton{
-    background-color: #575757;
+    background-color: #393939;
     color: #76D6FF;
     font-family: "Lexend", sans-serif;
 
@@ -100,3 +100,343 @@ body{
     font-weight: 500;
 
 }
+
+
+/*barra de navegacion*/
+.navbar {
+    background-color: #393939;
+    padding: 1rem;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    color: #76D6FF;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0;
+}
+.nav-links li {
+    display: inline;
+}
+.nav-links a {
+    color: #76D6FF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #76D6FF;
+}
+
+
+/*Perfil*/
+.profile-container {
+    background-color: #1a202c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.profile-picture {
+    position: relative;
+}
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3b82f6;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.edit-button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+.stat-item {
+    background: #60a5fa;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.stat-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*shop-tienda*/
+.shop-container {
+    background-color: #1a202c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.shop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+}
+.nav-item {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+.user-icon {
+    width: 30px;
+    height: 30px;
+}
+.shop-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.tab {
+    background: #3b82f6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.shop-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+.shop-item {
+    background: #60a5fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+.item-image {
+    width: 100px;
+    height: 100px;
+}
+.shop-detail {
+    margin-top: 40px;
+}
+.detail-card {
+    display: flex;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.detail-image {
+    width: 100px;
+    height: 100px;
+}
+.buy-button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Ranking*/
+.global-ranking {
+    text-align: center;
+    background-color: #1a202c;
+    color: white;
+    padding: 20px;
+}
+.ranking-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.search-bar {
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.ranking-table table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+.ranking-table th, .ranking-table td {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.pagination {
+    margin-top: 20px;
+}
+.page {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+}
+.page.active {
+    background-color: #60a5fa;
+}
+.dots {
+    color: white;
+}
+
+
+/*timelevels*/
+body {
+    background-color: #1a202c;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.record-card {
+    border: 2px solid #3b82f6;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.leaderboard th, .leaderboard td {
+    padding: 10px;
+    border: 1px solid white;
+}
+.pagination button {
+    margin: 5px;
+    background-color: #3b82f6;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.comments-section textarea {
+    width: 80%;
+    height: 100px;
+    margin: 10px 0;
+}
+.comment-box {
+    border: 1px solid #3b82f6;
+    padding: 10px;
+    margin: 10px auto;
+    width: 60%;
+    border-radius: 5px;
+}
+.footer {
+    background-color: #1a202c;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+/*levels*/
+body {
+    background-color: #1a202c;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-links .active {
+    text-decoration: underline;
+}
+.search-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.levels-container {
+    margin: 20px auto;
+}
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+}
+.level-box {
+    background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.footer {
+    background-color: #1a202c;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+/**/
