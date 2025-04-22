@@ -20,6 +20,7 @@
 
 body {
     background-color: #393939;
+    overflow-x: hidden;
 }
 
 .cont_global {
@@ -187,48 +188,71 @@ body {
 /* LEVELS */
 .cont_levels {
     width: 100%;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    /* espacio entre los divs */
-    padding: 10px;
-
-    padding-right: 10rem;
-    padding-left: 10rem;
-
+    gap: 1rem;
+    padding: 1rem;
     margin-top: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
 }
-
-
 
 .level {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-
-    margin-bottom: 3rem;
+    
 }
 
 .level_url {
     background: linear-gradient(45deg, #76BDFF, #76D6FF);
-    height: 17.625rem;
-    width: 17.625rem;
+    aspect-ratio: 1 / 1; 
+    width: 80%; 
+    max-width:80%; 
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 1rem;
     text-decoration: none;
-
 }
 
 .level_url p {
-    font-size: 3rem;
+    font-size: clamp(1rem, 2.5vw, 3rem); /* ✅ Escala con el tamaño del viewport */
     font-weight: 700;
 }
 
+/* Opcional: mejorar visual en pantallas MUY pequeñas */
+@media (max-width: 600px) {
+    .cont_levels {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+}
+
+
+/* LEVEL */
+
+.cont_level_content{
+    display: flex;
+    flex-direction: row;
+}
+.cont_level_record{
+    height: 70vh;
+    width: 35%;
+    background-color: red;
+}
+
+.record{
+    width: 100%;
+    height: 100%;
+
+    border: 5px solid #76BDFE;
+}
+.cont_tabla_level{
+    height: 70vh;
+    width: 65%;
+    background-color: green;
+}
 
 /* MARQUEE */
 .marquee {

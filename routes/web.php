@@ -23,6 +23,11 @@ Route::get('/levels', function () {
     return view('levels', compact('levels'));
 })->name('levels');
 
+Route::get('/levels/{id}', function ($id) {
+    $level = Level::where('id', $id)->first();
+
+    return view('level', compact('level'));
+});
 
 Route::get('/csrf-token', function (Request $request) {
     return response()->json(['csrf_token' => csrf_token()]);

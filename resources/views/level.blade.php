@@ -9,17 +9,16 @@
     <div class="marquee">
         <h1>FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER</h1>
     </div>
+    <div class="cont_level_content">
+        <div class="cont_level_record">
+            <div class="record">
 
-    <div class="cont_levels">
-        @foreach ($levels as $level)
-            <div class="level">
-                <a href="levels/{{$level->id}}" class="level_url">
-                    <p>
-                        {{$level->name}}
-                    </p>
-                </a>
             </div>
-        @endforeach
+        </div>
+        <div class="cont_tabla_level">
+    
+        </div>
+    
     </div>
 
 </body>
