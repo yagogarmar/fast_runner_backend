@@ -53,9 +53,9 @@
   }
 
   // Mostrar uno al entrar
-  crearTexto();
+  //crearTexto();
 
   // Repetir cada cierto tiempo
-  setInterval(crearTexto, frecuencia);
+  //setInterval(crearTexto, frecuencia);
 </script>
 @endsection
