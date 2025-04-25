@@ -37,88 +37,95 @@
                     </div>
 
                 </div>
-                <div class="fila">
-                    <div class="col-2">
-                        <p>1</p>
+                <div class="filas">
+                    <div class="fila">
+                        <div class="col-2">
+                            <p>1</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{asset('/assets/pfp.png')}}" alt="">
+                            <p>Lorem ipsum</p>
+                        </div>
+                        <div class="col-3">
+                            <p>03:34:02</p>
+                        </div>
+                        <div class="col-3">
+                            <p>19/03/2025</p>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <img src="{{asset('/assets/pfp.png')}}" alt="">
-                        <p>Lorem ipsum</p>
+                    <div class="fila">
+                        <div class="col-2">
+                            <p>1</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{asset('/assets/pfp.png')}}" alt="">
+                            <p>Lorem ipsum</p>
+                        </div>
+                        <div class="col-3">
+                            <p>03:34:02</p>
+                        </div>
+                        <div class="col-3">
+                            <p>19/03/2025</p>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <p>03:34:02</p>
+                    <div class="fila">
+                        <div class="col-2">
+                            <p>1</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{asset('/assets/pfp.png')}}" alt="">
+                            <p>Lorem ipsum</p>
+                        </div>
+                        <div class="col-3">
+                            <p>03:34:02</p>
+                        </div>
+                        <div class="col-3">
+                            <p>19/03/2025</p>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <p>19/03/2025</p>
+                    <div class="fila">
+                        <div class="col-2">
+                            <p>1</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{asset('/assets/pfp.png')}}" alt="">
+                            <p>Lorem ipsum</p>
+                        </div>
+                        <div class="col-3">
+                            <p>03:34:02</p>
+                        </div>
+                        <div class="col-3">
+                            <p>19/03/2025</p>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="col-2">
+                            <p>1</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{asset('/assets/pfp.png')}}" alt="">
+                            <p>Lorem ipsum</p>
+                        </div>
+                        <div class="col-3">
+                            <p>03:34:02</p>
+                        </div>
+                        <div class="col-3">
+                            <p>19/03/2025</p>
+                        </div>
                     </div>
                 </div>
-                <div class="fila">
-                    <div class="col-2">
-                        <p>1</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="{{asset('/assets/pfp.png')}}" alt="">
-                        <p>Lorem ipsum</p>
-                    </div>
-                    <div class="col-3">
-                        <p>03:34:02</p>
-                    </div>
-                    <div class="col-3">
-                        <p>19/03/2025</p>
-                    </div>
-                </div>
-                <div class="fila">
-                    <div class="col-2">
-                        <p>1</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="{{asset('/assets/pfp.png')}}" alt="">
-                        <p>Lorem ipsum</p>
-                    </div>
-                    <div class="col-3">
-                        <p>03:34:02</p>
-                    </div>
-                    <div class="col-3">
-                        <p>19/03/2025</p>
-                    </div>
-                </div>
-                <div class="fila">
-                    <div class="col-2">
-                        <p>1</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="{{asset('/assets/pfp.png')}}" alt="">
-                        <p>Lorem ipsum</p>
-                    </div>
-                    <div class="col-3">
-                        <p>03:34:02</p>
-                    </div>
-                    <div class="col-3">
-                        <p>19/03/2025</p>
-                    </div>
-                </div>
-                <div class="fila">
-                    <div class="col-2">
-                        <p>1</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="{{asset('/assets/pfp.png')}}" alt="">
-                        <p>Lorem ipsum</p>
-                    </div>
-                    <div class="col-3">
-                        <p>03:34:02</p>
-                    </div>
-                    <div class="col-3">
-                        <p>19/03/2025</p>
-                    </div>
-                </div>
-
                 
+            </div>
+            <div class="cont_paginador">
+                <div class="paginador">
+
+                </div>
             </div>
         </div>
     </div>
 </body>
 
 <script src="{{ asset('js/marquee.js') }}"></script>
+<script src="{{ asset('js/level.js') }}"></script>
 
 @endsection

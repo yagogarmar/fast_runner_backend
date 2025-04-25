@@ -275,13 +275,15 @@ body {
     margin-top: 1rem;
 }
 .cont_tabla_level{
-    height: 70vh;
+    height: 75vh;
     width: 65%;
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 1rem;
+
+    
 }
 
 .cont_tabla_level h1 {
@@ -290,7 +292,7 @@ body {
 
 
 .tabla{
-    height:  calc(100% - 8rem);
+    height:  calc(100% - 7rem);
     width: 100%;
 }
 
@@ -299,7 +301,7 @@ body {
     flex-direction: row;
 
     border-bottom: 1px solid white;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 .titulos_tabla div{
     text-align: center;
@@ -309,6 +311,11 @@ body {
     margin: 0;
     font-weight: 500;
 }
+
+.filas{
+    height: calc(100% - 3rem);
+}
+
 .fila{
     width: 100%;
     height: 20%;
@@ -340,6 +347,24 @@ body {
     margin-right: 1rem;
 }
 
+
+.cont_paginador{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.paginador{
+    border: solid 4px #76BDFE;
+    width: 40%;
+    height: 2.5rem;
+
+    border-radius: 100px;
+}
 
 /* TABLAS */
 
