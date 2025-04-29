@@ -501,8 +501,19 @@ body {
 }
 
 
+.cont_spinner{
+    height: 100%;
+    width: 100%;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.spinner-custom {
+    color: white; /* Tu color personalizado */
+    
+}
 
 
 

@@ -38,7 +38,11 @@
 
                 </div>
                 <div id="filas" class="filas">
-                    
+                    <div class="cont_spinner">
+                        <div class=" spinner-custom  spinner-border " role="status">
+                            
+                        </div>
+                    </div>
                 </div>
                 
             </div>

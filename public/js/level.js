@@ -17,7 +17,7 @@ const paginador = [document.getElementById('pag_1'),
 let current_page = 0;
 console.log(numLevel)
 
-getData(`/time/get/${numLevel}`)
+//getData(`/time/get/${numLevel}`)
 getRecord()
 
 
