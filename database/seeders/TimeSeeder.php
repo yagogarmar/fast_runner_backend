@@ -15,6 +15,6 @@ class TimeSeeder extends Seeder
     public function run(): void
     {   
 
-        Time::factory()->count(60)->create();
+        Time::factory()->count(700)->create();
     }
 }

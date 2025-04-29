@@ -354,6 +354,12 @@ body {
 
 .cont_tabla_level h1 {}
 
+.num_top{
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    margin: 0;
+}
 
 .tabla {
     height: calc(100% - 7rem);
@@ -425,14 +431,79 @@ body {
 }
 
 .paginador {
-    border: solid 4px #76BDFE;
     width: 40%;
     height: 2.5rem;
 
-    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.6rem;
+    
 }
 
-/* TABLAS */
+.paginador div{
+    cursor: pointer;
+    
+}
+
+.paginador div img{
+    width: 2rem;    
+}
+
+
+.esfera_paginador{
+    height: 2.5rem;
+    width: 2.5rem;
+    min-width: 2.5rem;
+
+    border-radius: 100px;
+    background-color: #76BDFE;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.esfera_paginador2{
+    height: 2.5rem;
+    width: 2.5rem;
+    min-width: 2.5rem;
+
+    border-radius: 100px;
+    border: solid 4px #76BDFE;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.esfera_paginador p{
+    margin: 0;
+    font-weight: 700;
+    color: #393939;
+    font-size: 1.4rem;
+
+    margin-top: 3px;
+}
+
+.esfera_paginador2 p{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 3px;
+
+
+}
+
+
+
+
+
 
 
 

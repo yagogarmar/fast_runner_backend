@@ -5,10 +5,19 @@ const usernameRecord = document.getElementById('usernameRecord');
 const timeRecord = document.getElementById('timeRecord');
 const pfp_record = document.getElementById('pfp_record');
 const fecha_record = document.getElementById('fecha_record');
+const primera_pagina = document.getElementById('primera_pagina');
+const ultima_pagina = document.getElementById('ultima_pagina');
+const paginador = [document.getElementById('pag_1'),
+                    document.getElementById('pag_2'),
+                    document.getElementById('pag_3'),
+                    document.getElementById('pag_4'),
+                    document.getElementById('pag_5')]
 
+
+let current_page = 0;
 console.log(numLevel)
 
-getData()
+getData(`/time/get/${numLevel}`)
 getRecord()
 
 
@@ -42,8 +51,8 @@ function getRecord() {
 
 
 
-function getData() {
-    fetch(`/time/get/${numLevel}`, {
+function getData(url) {
+    fetch(url, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -58,12 +67,19 @@ function getData() {
         })
         .then(data => {
             console.log(data);
+            cont_filas.innerHTML = "";
 
+            current_page = data.data.current_page;
+
+            let top_iterator = current_page * 5 - 5;
+
+            
             data.data.data.forEach(item => {
+                top_iterator++;
                 const estructura = `
                     <div class="fila">
                         <div class="col-2">
-                            <p>1</p>
+                            <h2 class="num_top" >${top_iterator}</h2>
                         </div>
                         <div class="col-4">
                             <img src="/img/pfp.png" alt="">
@@ -77,11 +93,61 @@ function getData() {
                         </div>
                     </div>
               `;
-
-
                 cont_filas.innerHTML += estructura
-
             });
+
+            ultima_pagina.setAttribute("onclick", `getData("${data.data.last_page_url}")`);
+            primera_pagina.setAttribute("onclick", `getData("${data.data.first_page_url}")`);
+
+
+            
+            let resultado = [];
+
+            if (current_page === 1) {
+              // Caso especial: principio
+              for (let i = 1; i <= Math.min(5, data.data.last_page); i++) {
+                resultado.push(i);
+              }
+            } else if (current_page === 2) {
+              // Casi al principio
+              for (let i = 1; i <= Math.min(5, data.data.last_page); i++) {
+                resultado.push(i);
+              }
+            } else if (current_page === data.data.last_page) {
+              // Caso especial: final
+              for (let i = current_page - 4; i <= current_page; i++) {
+                if (i >= 1) resultado.push(i);
+              }
+            } else if (current_page === data.data.last_page - 1) {
+              // Penúltimo número
+              for (let i = current_page - 3; i <= current_page + 1; i++) {
+                if (i >= 1 && i <= data.data.last_page) resultado.push(i);
+              }
+            } else {
+              // Caso general
+              for (let i = current_page - 2; i <= current_page + 2; i++) {
+                if (i >= 1 && i <= data.data.last_page) resultado.push(i);
+              }
+            }
+
+            paginador.forEach( pag => {
+                pag.className = "esfera_paginador2";
+            })
+
+            let i = 0;
+            resultado.forEach(num => {
+                
+                paginador[i].children[0].textContent = num;
+                paginador[i].setAttribute("onclick", `getData("http://localhost:8000/time/get/1?page=${num}")`);
+
+                if(data.data.current_page == num){
+                    paginador[i].className = "esfera_paginador"
+                }
+
+
+                i++
+            })
+
         })
         .catch(error => console.error("Error:", error));
 }

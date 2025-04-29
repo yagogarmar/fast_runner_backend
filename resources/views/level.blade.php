@@ -44,7 +44,31 @@
             </div>
             <div class="cont_paginador">
                 <div class="paginador">
+                    <div id="primera_pagina">
+                        <img src="{{asset('/assets/flechas_izquierda.svg')}}" alt="">
+                    </div>
+                    <div id="pag_1" class="esfera_paginador2">
+                        <p>1</p>
+                    </div>
+                    <div id="pag_2" class="esfera_paginador2">
+                        <p>1</p>
 
+                    </div>
+                    <div id="pag_3" class="esfera_paginador2">
+                        <p>1</p>
+
+                    </div>
+                    <div id="pag_4" class="esfera_paginador2">
+                        <p>1</p>
+
+                    </div>
+                    <div id="pag_5" class="esfera_paginador2">
+                        <p>1</p>
+
+                    </div>
+                    <div id="ultima_pagina">
+                        <img src="{{asset('/assets/flechas_derecha.svg')}}" alt="">
+                    </div>
                 </div>
             </div>
         </div>
