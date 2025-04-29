@@ -10,6 +10,8 @@ class Time extends Model
 {
     use HasFactory;
 
+    protected $with = 'user';
+
     protected $fillable = [
         'user_id',
         'level_id',
@@ -27,6 +29,6 @@ class Time extends Model
 
     public function level(): BelongsTo
     {
-        return $this->belongsTo(Levels::class);
+        return $this->belongsTo(Level::class);
     }
 }

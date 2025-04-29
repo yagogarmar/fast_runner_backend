@@ -5,23 +5,25 @@
 
 <body>
     <x-navbar></x-navbar>
+
     <div class="marquee">
         <h1>FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER</h1>
     </div>
 
-    <div class="cont_perfil">
-        <div class="cont_pfp_perfil">
-            <img onclick="update_pfp()" src="{{asset('/img/pfp.png')}}" alt="">
-        </div>
-        <div class="cont_info_perfil">
-            <div class="">
-
+    <div class="cont_levels">
+        @foreach ($levels as $level)
+            <div class="level">
+                <a href="levels/{{$level->id}}" class="level_url">
+                    <p>
+                        {{$level->name}}
+                    </p>
+                </a>
             </div>
-        </div>
+        @endforeach
     </div>
-    <input type="file" name="" id="foto_pfp" hidden>
+
+</body>
 
 <script src="{{ asset('js/marquee.js') }}"></script>
-<script src="{{ asset('js/perfil.js') }}"></script>
 
 @endsection

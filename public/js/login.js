@@ -1,10 +1,9 @@
-console.log('OK')
 
 const username = document.getElementById("username")
 const password = document.getElementById("password")
 
-function login(){
-const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+function login() {
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 
     fetch("/login", {
         method: "POST",
@@ -17,35 +16,35 @@ const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
             password: password.value
         })
     })
-    .then(response => {
-        if (response.status === 200) {
-            
-            return response.json(); 
-        } else {
-            throw new Error(`Error en la respuesta: ${response.status} ${response.statusText}`);
-        }
-    })
-    .then(data => {
-        window.location = window.location.origin + "/perfil"
-        console.log(data);
-    })
-    .catch(error => console.error("Error:", error));
-    
+        .then(response => {
+            if (response.status === 200) {
+
+                return response.json();
+            } else {
+                throw new Error(`Error en la respuesta: ${response.status} ${response.statusText}`);
+            }
+        })
+        .then(data => {
+            window.location = window.location.origin;
+            console.log(data);
+        })
+        .catch(error => console.error("Error:", error));
+
 }
 
-function logout(){
+function logout() {
     fetch("/logout", {
         method: "GET"
     })
-    .then(response => {
-        if (response.status === 200) {
-            return response.json(); 
-        } else {
-            throw new Error(`Error en la respuesta: ${response.status} ${response.statusText}`);
-        }
-    })
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => console.error("Error:", error));
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error(`Error en la respuesta: ${response.status} ${response.statusText}`);
+            }
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => console.error("Error:", error));
 }

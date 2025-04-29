@@ -22,6 +22,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'username',
+        'monedas',
         'email',
         'password',
     ];
@@ -66,6 +67,11 @@ class User extends Authenticatable
     public function times(): HasMany
     {
         return $this->hasMany(Time::class);
+    }
+    
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class);
     }
 
     public function products(): BelongsToMany
