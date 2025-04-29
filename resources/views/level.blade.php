@@ -13,10 +13,10 @@
         <div class="cont_level_record">
             <div class="record">
                 <h1>RECORD</h1>
-                <img src="{{asset('/assets/pfp.png')}}" alt="">
-                <h3>Lorem ipsum</h3>
-                <h1 class="time_record">03:34:02</h1>
-                <h4>19/03/2025</h4>
+                <img id="pfp_record" src="{{asset('/assets/pfp.png')}}" alt="">
+                <h3 id="usernameRecord">Lorem ipsum</h3>
+                <h1 id="timeRecord" class="time_record">03:34:02</h1>
+                <h4 id="fecha_record">19/03/2025</h4>
             </div>
         </div>
         <div class="cont_tabla_level">
@@ -37,82 +37,8 @@
                     </div>
 
                 </div>
-                <div class="filas">
-                    <div class="fila">
-                        <div class="col-2">
-                            <p>1</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{{asset('/assets/pfp.png')}}" alt="">
-                            <p>Lorem ipsum</p>
-                        </div>
-                        <div class="col-3">
-                            <p>03:34:02</p>
-                        </div>
-                        <div class="col-3">
-                            <p>19/03/2025</p>
-                        </div>
-                    </div>
-                    <div class="fila">
-                        <div class="col-2">
-                            <p>1</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{{asset('/assets/pfp.png')}}" alt="">
-                            <p>Lorem ipsum</p>
-                        </div>
-                        <div class="col-3">
-                            <p>03:34:02</p>
-                        </div>
-                        <div class="col-3">
-                            <p>19/03/2025</p>
-                        </div>
-                    </div>
-                    <div class="fila">
-                        <div class="col-2">
-                            <p>1</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{{asset('/assets/pfp.png')}}" alt="">
-                            <p>Lorem ipsum</p>
-                        </div>
-                        <div class="col-3">
-                            <p>03:34:02</p>
-                        </div>
-                        <div class="col-3">
-                            <p>19/03/2025</p>
-                        </div>
-                    </div>
-                    <div class="fila">
-                        <div class="col-2">
-                            <p>1</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{{asset('/assets/pfp.png')}}" alt="">
-                            <p>Lorem ipsum</p>
-                        </div>
-                        <div class="col-3">
-                            <p>03:34:02</p>
-                        </div>
-                        <div class="col-3">
-                            <p>19/03/2025</p>
-                        </div>
-                    </div>
-                    <div class="fila">
-                        <div class="col-2">
-                            <p>1</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{{asset('/assets/pfp.png')}}" alt="">
-                            <p>Lorem ipsum</p>
-                        </div>
-                        <div class="col-3">
-                            <p>03:34:02</p>
-                        </div>
-                        <div class="col-3">
-                            <p>19/03/2025</p>
-                        </div>
-                    </div>
+                <div id="filas" class="filas">
+                    
                 </div>
                 
             </div>

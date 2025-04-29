@@ -36,6 +36,7 @@ Route::get('/level/{id}',       [LevelsController::class , 'show']);
 
 Route::group(['prefix' => 'time'], function () {
     Route::get('/get/{id}',          [TimesController::class, 'get'] );
+    Route::get('/record/{id}',          [TimesController::class, 'getRecord'] );
 });
 
 Route::middleware('auth')->group(function() {

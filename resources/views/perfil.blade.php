@@ -1,14 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>PERFIL</h1>
-    <button onclick="logout()">Logout</button>
-</body>
-<script src="{{ asset('js/login.js') }}"></script>
 
-</html>
+@extends('layouts.app')
+@section('title', 'Levels')
+@section('content')
+
+<body>
+    <x-navbar></x-navbar>
+    <div class="marquee">
+        <h1>FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER</h1>
+    </div>
+
+    <div class="cont_perfil">
+        <div class="cont_pfp_perfil">
+            <img onclick="update_pfp()" src="{{asset('/img/pfp.png')}}" alt="">
+        </div>
+        <div class="cont_info_perfil">
+            <div class="">
+
+            </div>
+        </div>
+    </div>
+    <input type="file" name="" id="foto_pfp" hidden>
+
+<script src="{{ asset('js/marquee.js') }}"></script>
+<script src="{{ asset('js/perfil.js') }}"></script>
+
+@endsection

@@ -15,6 +15,13 @@
         <a href="/store" class="opt_navbar">
             <p class="text_navbar">STORE</p>
         </a>
+
+
+        <a class="pfp_navbar" href="/perfil">
+            <img src="/img/pfp.png" alt="">
+        </a>
     </div>
+
+
 
 </div>
