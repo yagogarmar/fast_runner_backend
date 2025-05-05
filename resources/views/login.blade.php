@@ -18,7 +18,9 @@
             <input type="text" id="username" class="loginInput" placeholder="USERNAME">
             <input type="password" id="password" class="loginInput" placeholder="PASSWORD">
             <button onclick="login()" class="loginButton">CONTINUE</button>
-            <button onclick="login()" class="goregisterButton">REGISTER</button>
+            <a href="/register">
+              <button  class="goregisterButton">REGISTER</button>
+            </a>
         </div>
     </div>
     

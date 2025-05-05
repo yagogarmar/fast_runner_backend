@@ -15,7 +15,7 @@
         </div>
         <div class="cont_info_perfil">
             <div class="">
-
+                <h1></h1>
             </div>
         </div>
     </div>

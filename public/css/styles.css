@@ -96,7 +96,7 @@ body {
     height: 3.2rem;
 
     font-size: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-weight: 400;
 }
 
@@ -348,13 +348,13 @@ body {
     flex-direction: column;
     align-items: center;
     margin-right: 1rem;
-
+    position: relative;
 
 }
 
 .cont_tabla_level h1 {}
 
-.num_top{
+.num_top {
     font-size: 1.8rem;
     font-weight: 600;
 
@@ -364,6 +364,7 @@ body {
 .tabla {
     height: calc(100% - 7rem);
     width: 100%;
+
 }
 
 .titulos_tabla {
@@ -422,10 +423,14 @@ body {
 
 .cont_paginador {
     width: 100%;
-    height: 100%;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: absolute;
+    bottom: 0;
+
 
 
 }
@@ -440,20 +445,20 @@ body {
     justify-content: center;
 
     gap: 0.6rem;
-    
+
 }
 
-.paginador div{
+.paginador div {
     cursor: pointer;
-    
+
 }
 
-.paginador div img{
-    width: 2rem;    
+.paginador div img {
+    width: 2rem;
 }
 
 
-.esfera_paginador{
+.esfera_paginador {
     height: 2.5rem;
     width: 2.5rem;
     min-width: 2.5rem;
@@ -468,7 +473,7 @@ body {
 
 }
 
-.esfera_paginador2{
+.esfera_paginador2 {
     height: 2.5rem;
     width: 2.5rem;
     min-width: 2.5rem;
@@ -482,7 +487,7 @@ body {
 }
 
 
-.esfera_paginador p{
+.esfera_paginador p {
     margin: 0;
     font-weight: 700;
     color: #393939;
@@ -491,7 +496,7 @@ body {
     margin-top: 3px;
 }
 
-.esfera_paginador2 p{
+.esfera_paginador2 p {
     margin: 0;
     font-size: 1.2rem;
     font-weight: 700;
@@ -501,7 +506,7 @@ body {
 }
 
 
-.cont_spinner{
+.cont_spinner {
     height: 100%;
     width: 100%;
 
@@ -511,8 +516,9 @@ body {
 }
 
 .spinner-custom {
-    color: white; /* Tu color personalizado */
-    
+    color: white;
+    /* Tu color personalizado */
+
 }
 
 

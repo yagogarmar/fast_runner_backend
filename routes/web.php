@@ -11,39 +11,22 @@ use Illuminate\Support\Facades\Route;
 
 // VISTAS
 Route::get('/login', [WebCommonController::class , 'viewLogin'])->name('login');
-
-Route::get('/', [WebCommonController::class , 'viewHome'])->name('home');
-
-Route::get('/levels', [WebCommonController::class , 'viewLevels'])->name('levels');
-
-Route::get('/levels/{id}',[WebCommonController::class , 'viewLevel']);
+Route::get('/register', [WebCommonController::class , 'viewRegister'])->name('register');
 
 
 
 
-
-
-
-Route::get('/csrf-token', function (Request $request) {
-    return response()->json(['csrf_token' => csrf_token()]);
-});
-
-Route::post('/login',           [AuthController::class, 'webLogin']);
-Route::post('/register',        [AuthController::class, 'apiRegister']);
-
-Route::get('/level',            [LevelsController::class , 'get']);
-Route::get('/level/{id}',       [LevelsController::class , 'show']);
-
-Route::group(['prefix' => 'time'], function () {
-    Route::get('/get/{id}',          [TimesController::class, 'get'] );
-    Route::get('/record/{id}',          [TimesController::class, 'getRecord'] );
-});
 
 Route::middleware('auth')->group(function() {
- 
+    // VISTAS
     Route::get('/perfil', function () {
         return view('perfil');
     });
+
+    Route::get('/', [WebCommonController::class , 'viewHome'])->name('home');
+    Route::get('/levels', [WebCommonController::class , 'viewLevels'])->name('levels');
+    Route::get('/levels/{id}',[WebCommonController::class , 'viewLevel']);
+
 
     Route::any('/logout', [AuthController::class, 'webLogout']);
 
@@ -54,4 +37,27 @@ Route::middleware('auth')->group(function() {
         Route::get('/products/{id}',          [StoreController::class, 'show'] );
         Route::get('/buy/{id}',          [StoreController::class, 'buy'] );
     });
+
+
+
+
+    Route::get('/csrf-token', function (Request $request) {
+        return response()->json(['csrf_token' => csrf_token()]);
+    });
+    
+ 
+    Route::get('/level',            [LevelsController::class , 'get']);
+    Route::get('/level/{id}',       [LevelsController::class , 'show']);
+    
+    Route::group(['prefix' => 'time'], function () {
+        Route::get('/get/{id}',          [TimesController::class, 'get'] );
+        Route::get('/record/{id}',          [TimesController::class, 'getRecord'] );
+    });
 });
+
+
+Route::post('/login',           [AuthController::class, 'webLogin']);
+Route::post('/register',        [AuthController::class, 'apiRegister']);
+
+
+

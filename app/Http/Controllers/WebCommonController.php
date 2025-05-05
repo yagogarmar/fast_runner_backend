@@ -12,6 +12,11 @@ class WebCommonController extends Controller
         return view('login');
     }
 
+    public function viewRegister(){
+
+        return view('register');
+    }
+
     public function viewHome(){
         return view('home');
     }
