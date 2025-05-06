@@ -4,19 +4,26 @@
 @section('content')
 
 <body>
-    <x-navbar></x-navbar>
+    <x-navbar :user="$user" />
+
     <div class="marquee">
         <h1>FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER</h1>
     </div>
 
     <div class="cont_perfil">
         <div class="cont_pfp_perfil">
-            <img onclick="update_pfp()" src="{{asset('/img/pfp.png')}}" alt="">
+            <img onclick="update_pfp()" src="{{$user->pfp}}" alt="">
         </div>
         <div class="cont_info_perfil">
-            <div class="">
-                <h1></h1>
+            <div>
+                <h1>{{$user->username}}</h1>
+                <h4>EMAIL</h4>
+                <p>{{$user->email}}</p>
+                <h4>ABOUT ME</h4>
+                <p>{{$user->bio}}</p>
+                
             </div>
+            
         </div>
     </div>
     <input type="file" name="" id="foto_pfp" hidden>

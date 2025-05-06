@@ -17,19 +17,31 @@ class WebCommonController extends Controller
         return view('register');
     }
 
-    public function viewHome(){
-        return view('home');
+    public function viewHome(Request $request ){
+
+        $user = $request->user();
+
+        return view('home', compact('user'));
     }
 
 
-    public function viewLevels(){
+    public function viewLevels(Request $request ){
         $levels = Level::all();
+        $user = $request->user();
 
-        return view('levels', compact('levels'));
+        return view('levels', compact('levels','user'));
     }
 
-    public function viewLevel(){
-
-        return view('level');
+    public function viewLevel(Request $request ){
+        $user = $request->user();
+        return view('level', compact('user'));
+        
     }
+    
+    public function viewPerfil(Request $request ){
+        $user = $request->user();
+
+        return view('perfil', compact('user'));
+    } 
 }
+

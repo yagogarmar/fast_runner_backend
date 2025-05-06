@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('username')->unique();
+            $table->text('bio')->default('');
             $table->string('pfp')->default("/img/pfp.png");
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('monedas');
+            $table->integer('monedas')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

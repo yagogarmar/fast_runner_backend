@@ -14,20 +14,19 @@ Route::get('/login', [WebCommonController::class , 'viewLogin'])->name('login');
 Route::get('/register', [WebCommonController::class , 'viewRegister'])->name('register');
 
 
+Route::post('/login',           [AuthController::class, 'webLogin']);
+Route::post('/register',        [AuthController::class, 'apiRegister']);
 
 
 
 Route::middleware('auth')->group(function() {
     // VISTAS
-    Route::get('/perfil', function () {
-        return view('perfil');
-    });
-
+    Route::get('/perfil', [WebCommonController::class , 'viewPerfil']);
     Route::get('/', [WebCommonController::class , 'viewHome'])->name('home');
     Route::get('/levels', [WebCommonController::class , 'viewLevels'])->name('levels');
     Route::get('/levels/{id}',[WebCommonController::class , 'viewLevel']);
 
-
+    Route::post('/perfil/foto', [AuthController::class, 'subirFoto']);
     Route::any('/logout', [AuthController::class, 'webLogout']);
 
     Route::post('/comment',           [LevelsController::class, 'comment']);
@@ -54,10 +53,6 @@ Route::middleware('auth')->group(function() {
         Route::get('/record/{id}',          [TimesController::class, 'getRecord'] );
     });
 });
-
-
-Route::post('/login',           [AuthController::class, 'webLogin']);
-Route::post('/register',        [AuthController::class, 'apiRegister']);
 
 
 

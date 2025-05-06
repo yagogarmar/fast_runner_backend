@@ -8,6 +8,7 @@ function login() {
     fetch("/login", {
         method: "POST",
         headers: {
+            "Accept": "application/json",
             "Content-Type": "application/json",
             "X-CSRF-TOKEN": csrfToken
         },

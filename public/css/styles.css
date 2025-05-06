@@ -223,17 +223,16 @@ body {
 
 .cont_pfp_perfil {
     height: 100%;
-    width: 50%;
+    width: 55%;
 
     display: flex;
     justify-content: end;
     align-items: center;
-
 }
 
 .cont_pfp_perfil img {
-    width: 50%;
-
+    width: 45%;
+    aspect-ratio: 1;
     border-radius: 100%;
 
     margin-right: 4rem;
@@ -242,10 +241,39 @@ body {
 }
 
 .cont_info_perfil {
-    background-color: #76D6FF;
     height: 100%;
-    width: 50%;
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+.cont_info_perfil div{
+    height: fit-content;
+    width: 100%;
+}
+.cont_info_perfil h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+
+    margin: 0;
+    margin-bottom: 2rem;
+}
+.cont_info_perfil h4 {
+    margin: 0;
+
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+
+}
+.cont_info_perfil p {
+    margin: 0;
+    margin-bottom: 1rem;
+
+}
+
+
 
 /* LEVELS */
 .cont_levels {

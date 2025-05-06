@@ -80,10 +80,16 @@ class AuthController extends Controller
 
     public function apiRegister(Request $request){
 
+        $request->validate([
+            'username' => 'required|string|max:255|unique:users,username',
+            'email' => 'required|string|email|max:255|unique:users,email',
+            'password' => 'required|string|min:8',
+        ]);
+
         $user = User::create([
             "username" => $request->username,
             "email" => $request->email,
-            "password" => $request->password
+            "password" => Hash::make($request->password)
         ]);
 
         if($user){
@@ -96,5 +102,21 @@ class AuthController extends Controller
         return response()->json([
             "message" => "Ha ocurrido un error",
         ], 400);
+    }
+
+    public function subirFoto(Request $request){
+        $request->validate([
+            'foto' => 'required|image|mimes:jpg,jpeg,png|max:2048'
+        ]);
+
+        $user = $request->user();
+
+        $path = $request->file('foto')->store('fotos_perfil', 'public');
+        $path = '/storage/'.$path;
+
+        $user->pfp = $path; // o usa $path completo si lo prefieres
+        $user->save();
+
+        return response()->json(['mensaje' => 'Foto subida correctamente', 'ruta' => $path]);
     }
 }

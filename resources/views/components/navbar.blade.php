@@ -18,7 +18,8 @@
 
 
         <a class="pfp_navbar" href="/perfil">
-            <img src="/img/pfp.png" alt="">
+            <img src="{{ $user->pfp }}" alt="">
+
         </a>
     </div>
 
