@@ -211,7 +211,7 @@ body {
 /* PERFIL */
 
 .cont_perfil {
-    height: 85vh;
+    height: 75vh;
     width: 100vw;
 
 
@@ -238,6 +238,7 @@ body {
     margin-right: 4rem;
 
     cursor: pointer;
+
 }
 
 .cont_info_perfil {
@@ -411,7 +412,9 @@ body {
     margin: 0;
     font-weight: 500;
 }
-
+.img_intento{
+    aspect-ratio: 1;
+}
 .filas {
     height: calc(100% - 3rem);
 }
@@ -550,7 +553,230 @@ body {
 }
 
 
+/* COMENTARIOS NIVELES*/
 
+.cont_comentarios{
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.cont_enviar_comentario{
+
+    width: 50%;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+
+    max-width: 40rem;
+}
+.cont_enviar_comentario div{
+    padding-left: 1rem;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.cont_enviar_comentario div button{
+    width: fit-content;
+}
+textarea:focus {
+    outline: none;
+}
+.cont_enviar_comentario textarea{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding-bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid white;
+}
+
+.pfp_enviar_comentario{
+    height: 70px;
+    aspect-ratio: 1;
+
+    border-radius: 100%;
+}
+.cont_comentarios_coments{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button_enviar_coment{
+    background-color:#76BDFE;
+    color: #393939;
+    font-weight: 700;
+    border: none;
+
+    margin-top: 0.5rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 10px;
+
+    font-size: 1.1rem;
+}
+
+.comentario{
+    width: 50%;
+    max-width: 40rem;
+
+    border: 3px solid #76BDFE;
+    padding-top: 1rem;
+    margin-top: 3rem;
+    border-radius: 20px;
+    padding-left: 1rem;
+
+    min-height: 5rem;
+    overflow-wrap: break-word; /* Rompe palabras largas */
+    padding-right: 1rem;
+    
+}
+.comentario_compelto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cont_responder{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 1rem;
+    
+    cursor: pointer;
+}
+
+.cont_responder p{
+    margin: 0;
+    margin-left: 0.5rem;
+    margin-top: 2px;
+    font-weight: 500;
+}
+.cont_responder img{
+    height: 1.1rem;
+}
+.cont_replie{
+    width: 50%;
+    max-width: 40rem;
+
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+.cont_pfp_usuario_tabla{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+.replie{
+    width: 80%;
+    border: 3px solid #76BDFE;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 20px;
+    padding-left: 1rem;
+
+    min-height: 5rem;
+}
+
+.expand_repleis{
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+
+    cursor: pointer;
+    font-weight: 600;
+    color: #b9b9b9;
+
+    display: none;
+}
+.linea_replie{
+    height: 100%;
+    top: 0;
+    left:   12%;
+    position: absolute;
+
+    width: 4px;
+    cursor: pointer;
+    background-color: #6E6E6E;
+}
+.info_user_comentario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    width: 100%;
+}
+.info_user_comentario h3{
+    margin-bottom: 0;
+
+    font-size: 1.3rem;
+}
+.info_user_comentario p{
+    margin: 0;
+    margin-left: 0.6rem;
+    margin-bottom: 3px;
+    font-weight: 600;
+
+    color: #c7c7c7;
+}
+.info_user_comentario img{
+    height: 3.2rem;
+    border-radius: 100%;
+    aspect-ratio: 1;
+    margin-right: 0.7rem;
+}
+
+.cont_text_area_respuesta{
+    width: 50%;
+    max-width: 40rem;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.cont_text_area{
+    height: 100%;
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+
+    align-items: start;
+}
+
+
+.cont_text_area textarea{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding-bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid white;
+}
+
+.cont_text_area div{
+    padding-left: 1rem;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
 
 /* MARQUEE */
 .marquee {

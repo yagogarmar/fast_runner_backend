@@ -13,7 +13,7 @@
         <div class="cont_level_record">
             <div class="record">
                 <h1>RECORD</h1>
-                <img id="pfp_record" src="{{asset('/assets/pfp.png')}}" alt="">
+                <img id="pfp_record" src="" alt="">
                 <h3 id="usernameRecord">Lorem ipsum</h3>
                 <h1 id="timeRecord" class="time_record">03:34:02</h1>
                 <h4 id="fecha_record">19/03/2025</h4>
@@ -77,9 +77,63 @@
             </div>
         </div>
     </div>
+
+    <div class="cont_comentarios">
+        <div class="cont_enviar_comentario">
+            <img src="{{asset($user->pfp)}}" alt="" class="pfp_enviar_comentario">
+            <div>
+                <textarea name="" id="text_area_comment"  oninput="autoExpand(this)"></textarea>
+                <button onclick="sendComment()" class="button_enviar_coment">COMENTAR</button>
+            </div>
+        </div>
+        <div class="cont_comentarios_coments" id="comentarios">
+            @foreach ($comentarios as $comentario)
+            <div id="completo-{{$comentario->id}}" class="comentario_compelto">
+                <div class="comentario">
+                    <div class="info_user_comentario">
+                        <img src="{{$comentario->user->pfp}}" alt="">
+                        <h2>{{$comentario->user->username}}</h2>
+                        <p>{{$comentario->time_string}}</p>
+                    </div>
+                    <p>{{$comentario->content}}</p>
+                    <div onclick="clicButtonResponder('{{'completo-'.$comentario->id}}', '{{$user->pfp}}', '{{$comentario->id}}')" class="cont_responder">
+                        <img src="{{asset('/assets/responder.svg')}}" alt="">
+                        <p>Responder</p>
+                    </div>
+                </div>
+                <p class="expand_repleis" onclick="showReplies('.replie_comment-{{$comentario->id}}')" id=".replie_comment-{{$comentario->id}}">Press to show replies</p>
+                @foreach ($comentario->replies as $replie)
+                    <div class="cont_replie replie_comment-{{$comentario->id}}" >
+        
+                        <div class="linea_replie" onclick="hideReplies('.replie_comment-{{$comentario->id}}')">
+        
+                        </div>
+                        <div class="replie">
+                            <div class="info_user_comentario">
+                                <img src="{{$replie->user->pfp}}" alt="">
+                                <h2>{{$replie->user->username}}</h2>
+                                <p>{{$replie->time_string}}</p>
+                            </div>
+                            <p>{{$replie->content}}</p>
+                        </div>
+                        
+                    </div>
+
+
+                @endforeach
+            </div>
+            
+        @endforeach
+        </div>
+        
+
+    </div>
+
+
 </body>
 
 <script src="{{ asset('js/marquee.js') }}"></script>
 <script src="{{ asset('js/level.js') }}"></script>
+<script src="{{ asset('js/comments.js') }}"></script>
 
 @endsection

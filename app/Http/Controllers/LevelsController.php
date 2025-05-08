@@ -41,9 +41,13 @@ class LevelsController extends Controller
 
 
         if($comment){
+
+            $completeComent = Comment::where('id', $comment->id)->first();
+
+
             return response()->json([
                 "message" => "Comenario creado correctamente",
-                "comment" => $comment
+                "comment" => $completeComent
             ], 201);
         }
 

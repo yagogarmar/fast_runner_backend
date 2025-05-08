@@ -23,7 +23,12 @@ class WebCommonController extends Controller
 
         return view('home', compact('user'));
     }
+    public function viewDownload(Request $request ){
 
+        $user = $request->user();
+
+        return view('download', compact('user'));
+    }
 
     public function viewLevels(Request $request ){
         $levels = Level::all();
@@ -32,9 +37,13 @@ class WebCommonController extends Controller
         return view('levels', compact('levels','user'));
     }
 
-    public function viewLevel(Request $request ){
+    public function viewLevel(Request $request, $id ){
         $user = $request->user();
-        return view('level', compact('user'));
+        $level = Level::where('id', $id)->first();
+
+        $comentarios = $level->comments()->get();
+        
+        return view('level', compact('user', 'comentarios'));
         
     }
     

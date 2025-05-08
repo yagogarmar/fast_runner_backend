@@ -7,7 +7,7 @@ use App\Http\Controllers\TimesController;
 use App\Http\Controllers\WebCommonController;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Comment;
 
 // VISTAS
 Route::get('/login', [WebCommonController::class , 'viewLogin'])->name('login');
@@ -17,11 +17,23 @@ Route::get('/register', [WebCommonController::class , 'viewRegister'])->name('re
 Route::post('/login',           [AuthController::class, 'webLogin']);
 Route::post('/register',        [AuthController::class, 'apiRegister']);
 
+Route::get('comments', function() {
 
+    $comments = Comment::all();
+    return $comments;
+});
+
+
+
+
+Route::get('/csrf-token', function (Request $request) {
+    return response()->json(['csrf_token' => csrf_token()]);
+});
 
 Route::middleware('auth')->group(function() {
     // VISTAS
     Route::get('/perfil', [WebCommonController::class , 'viewPerfil']);
+    Route::get('/download', [WebCommonController::class , 'viewDownload']);
     Route::get('/', [WebCommonController::class , 'viewHome'])->name('home');
     Route::get('/levels', [WebCommonController::class , 'viewLevels'])->name('levels');
     Route::get('/levels/{id}',[WebCommonController::class , 'viewLevel']);
@@ -38,12 +50,6 @@ Route::middleware('auth')->group(function() {
     });
 
 
-
-
-    Route::get('/csrf-token', function (Request $request) {
-        return response()->json(['csrf_token' => csrf_token()]);
-    });
-    
  
     Route::get('/level',            [LevelsController::class , 'get']);
     Route::get('/level/{id}',       [LevelsController::class , 'show']);

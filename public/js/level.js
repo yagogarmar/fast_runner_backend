@@ -50,7 +50,10 @@ function getRecord() {
 }
 
 
-
+function autoExpand(textarea) {
+    textarea.style.height = 'auto'; // reinicia el alto
+    textarea.style.height = textarea.scrollHeight + 'px'; // lo ajusta al contenido
+}
 
 
 function getData(url) {
@@ -85,8 +88,8 @@ function getData(url) {
                         <div class="col-2">
                             <h2 class="num_top" >${top_iterator}</h2>
                         </div>
-                        <div class="col-4">
-                            <img src="/img/pfp.png" alt="">
+                        <div class="col-4 cont_pfp_usuario_tabla" >
+                            <img class="img_intento" src="${item.user.pfp}" alt="">
                             <p>${item.user.username}</p>
                         </div>
                         <div class="col-3">
@@ -142,7 +145,7 @@ function getData(url) {
             resultado.forEach(num => {
 
                 paginador[i].children[0].textContent = num;
-                paginador[i].setAttribute("onclick", `getData("http://localhost:8000/time/get/${numLevel}?page=${num}")`);
+                paginador[i].setAttribute("onclick", `getData("/time/get/${numLevel}?page=${num}")`);
 
                 if (data.data.current_page == num) {
                     paginador[i].className = "esfera_paginador"

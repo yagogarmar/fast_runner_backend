@@ -21,6 +21,30 @@ class UserSeeder extends Seeder
             'monedas' => 500,
             'password' => Hash::make('0000'),
         ]);
+        DB::table('users')->insert([
+            'username' => 'john_doe',
+            'email' => 'john_doe@gmail.com',
+            'monedas' => 500,
+            'password' => Hash::make('0000'),
+        ]);
+        DB::table('users')->insert([
+            'username' => 'txema_00',
+            'email' => 'txema_00@gmail.com',
+            'monedas' => 500,
+            'password' => Hash::make('0000'),
+        ]);
+        DB::table('users')->insert([
+            'username' => 'uerynotu',
+            'email' => 'uerynotu@gmail.com',
+            'monedas' => 500,
+            'password' => Hash::make('0000'),
+        ]);
+        DB::table('users')->insert([
+            'username' => 'depardis',
+            'email' => 'depardis@gmail.com',
+            'monedas' => 500,
+            'password' => Hash::make('0000'),
+        ]);
 
         DB::table('users')->insert([
             'username' => 'admin',
