@@ -52,5 +52,14 @@ class WebCommonController extends Controller
 
         return view('perfil', compact('user'));
     } 
+
+
+    public function viewUser(Request $request, $username ){
+        $user = $request->user();
+
+        $userSearch = User::where('username' , $username)->first();
+
+        return view('user', compact('user', 'userSearch'));
+    } 
 }
 

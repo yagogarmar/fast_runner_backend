@@ -38,6 +38,11 @@ Route::middleware('auth')->group(function() {
     Route::get('/levels', [WebCommonController::class , 'viewLevels'])->name('levels');
     Route::get('/levels/{id}',[WebCommonController::class , 'viewLevel']);
 
+
+    Route::get('/user/{useranme}',[WebCommonController::class , 'viewUser']);
+
+
+
     Route::post('/perfil/foto', [AuthController::class, 'subirFoto']);
     Route::any('/logout', [AuthController::class, 'webLogout']);
 
