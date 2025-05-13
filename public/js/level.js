@@ -99,7 +99,7 @@ function getData(url) {
                             <p>${formatearFecha(item.created_at)}</p>
                         </div>
                     </div>
-              `;
+                    `;
                 cont_filas.innerHTML += estructura
             });
 

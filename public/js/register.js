@@ -2,6 +2,7 @@ const username = document.getElementById("username")
 const email = document.getElementById("email")
 const password1 = document.getElementById("password1")
 const password2 = document.getElementById("password2")
+
 function register() {
     const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
     if (password1.value === password2.value) {
@@ -22,7 +23,7 @@ function register() {
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error("Errores de validación:", errorData.errors);
-                // Aquí puedes mostrar los errores en pantalla si lo deseas
+                
                 throw new Error("Validación fallida");
             }
             return response.json();

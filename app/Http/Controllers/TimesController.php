@@ -36,10 +36,10 @@ class TimesController extends Controller
         
         if($request->mytmies){
             $user_id = $request->user()->id;
-            $times = Time::where('level_id', $id)->orderBy('time', 'asc')->where('user_id', $user_id)->paginate(3);
+            $times = Time::where('level_id', $id)->where('completed', 1)->orderBy('time', 'asc')->where('user_id', $user_id)->paginate(3);
 
         }else{
-            $times = Time::where('level_id', $id)->orderBy('time', 'asc')->paginate(5);
+            $times = Time::where('level_id', $id)->where('completed', 1)->orderBy('time', 'asc')->paginate(5);
         }
 
         return response()->json([
@@ -49,11 +49,24 @@ class TimesController extends Controller
 
     public function getRecord(Request $request, $id){
         $times = null;
-        $times = Time::where('level_id', $id)->orderBy('time', 'asc')->get();
+        $times = Time::where('level_id', $id)->where('completed', 1)->orderBy('time', 'asc')->get();
        
 
         return response()->json([
             "data" => $times->first()
         ]);
     }
+
+    public function getTimesUser(Request $request){
+        $user = $request->user();
+
+        $times = $user->times()->with('level')->where('completed', 1)->paginate(5);
+
+        return response()->json([
+            "data" => $times
+        ]);
+
+    }
+
+    
 }

@@ -210,78 +210,148 @@ body {
 
 /* PERFIL */
 
-.cont_perfil {
-    height: 75vh;
-    width: 100vw;
-
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-
-.cont_pfp_perfil {
-    height: 100%;
-    width: 55%;
+.cont_info_perfil{
+    width: 30%;
+    height: fit-content;
+    padding-left: 2rem;
 
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
+    padding-top: 1rem;
+
 }
 
-.cont_pfp_perfil img {
-    width: 45%;
-    aspect-ratio: 1;
+.pfp_perfil{
     border-radius: 100%;
-
-    margin-right: 4rem;
-
+    aspect-ratio: 1;
     cursor: pointer;
 
+    height:  32vh;
+
+    min-width: 8rem;
+    min-height: 8rem;
 }
 
-.cont_info_perfil {
-    height: 100%;
-    width: 45%;
 
+.info_perfil{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
 
+    
+
+    position: relative;
 }
-.cont_info_perfil div{
-    height: fit-content;
+.usernmae_perfil{
+    text-align: center;
     width: 100%;
 }
-.cont_info_perfil h1 {
-    font-size: 3.6rem;
-    font-weight: 700;
-
-    margin: 0;
-    margin-bottom: 2rem;
+.mensaje_edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.3rem;
 }
-.cont_info_perfil h4 {
+.mensaje_edit p{
     margin: 0;
+    margin-left: 0.1rem;
+    font-size: 0.8rem;
+}
 
-    margin-bottom: 0.2rem;
+.mensaje_edit img{
+    height: 1.3rem;
+}
+.edit_button{
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+
+    border-radius: 100%;
+    
+    background-color: #76BDFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+.edit_button img{
+    height: 2rem;
+}
+
+.yes{
+    color: rgb(0, 216, 0);
+}
+.cont_tabla_perfil{
+    height: 75vh;
+    width: 70%;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+    position: relative;
+}
+
+.cont_perfil_global{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
+
+
+.level_name_perfil{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.level_name_perfil h5{
+    font-size: 1.5rem;
     font-weight: 600;
-
-}
-.cont_info_perfil p {
     margin: 0;
-    margin-bottom: 1rem;
-
 }
+
+.level_name_perfil:hover{
+    background-color: rgb(75, 75, 75);
+}
+
+
+
+
 
 
 
 /* LEVELS */
+
+.cont_ranking_global{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.cont_ranking_global div{
+    background: linear-gradient(45deg, #76BDFF, #76D6FF);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
 .cont_levels {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
     margin-top: 2rem;
     padding-left: 10%;
@@ -298,8 +368,8 @@ body {
 .level_url {
     background: linear-gradient(45deg, #76BDFF, #76D6FF);
     aspect-ratio: 1 / 1;
-    width: 80%;
-    max-width: 80%;
+    width: 70%;
+    max-width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;

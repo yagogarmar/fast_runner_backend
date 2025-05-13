@@ -10,7 +10,13 @@
         <h1>FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER</h1>
     </div>
 
-    <div class="cont_levels">
+    <div class="cont_ranking_global">
+        <div>
+            <h1>RANKING GLOBAL</h1>
+        </div>
+    </div>
+
+    <div class="cont_levels">   
         @foreach ($levels as $level)
             <div class="level">
                 <a href="levels/{{$level->id}}" class="level_url">

@@ -62,6 +62,7 @@ Route::middleware('auth')->group(function() {
     Route::group(['prefix' => 'time'], function () {
         Route::get('/get/{id}',          [TimesController::class, 'get'] );
         Route::get('/record/{id}',          [TimesController::class, 'getRecord'] );
+        Route::get('/user',          [TimesController::class, 'getTimesUser'] );
     });
 });
 

@@ -19,7 +19,6 @@ text_area_comment.addEventListener('keydown', function(event) {
 
 
 function sendComment() {
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 
     fetch("/comment", {
         method: "POST",

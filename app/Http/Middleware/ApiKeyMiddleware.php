@@ -13,7 +13,7 @@ class ApiKeyMiddleware
         $apiKey = $request->header('X-API-KEY');
 
         if ($apiKey !== config('app.api_key')) {
-            return response()->json(['message' => 'Unauthorized'], 401);
+            return response()->json(['message' => 'Unauthorized API KEY'], 401);
         }
 
         return $next($request);

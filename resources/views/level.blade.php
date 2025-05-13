@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 @section('title', 'Levels')
 @section('content')
@@ -14,9 +13,9 @@
             <div class="record">
                 <h1>RECORD</h1>
                 <img id="pfp_record" src="" alt="">
-                <h3 id="usernameRecord">Lorem ipsum</h3>
-                <h1 id="timeRecord" class="time_record">03:34:02</h1>
-                <h4 id="fecha_record">19/03/2025</h4>
+                <h3 id="usernameRecord"></h3>
+                <h1 id="timeRecord" class="time_record"></h1>
+                <h4 id="fecha_record"></h4>
             </div>
         </div>
         <div class="cont_tabla_level">

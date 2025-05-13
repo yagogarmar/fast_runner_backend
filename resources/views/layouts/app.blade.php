@@ -9,5 +9,8 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
 </head>
+    <script src="{{ asset('js/navbar.js') }}"></script>
+
     @yield('content')
+
 </html>
