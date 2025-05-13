@@ -306,7 +306,9 @@ body {
 }
 
 
-
+.title_tabla_perfil{
+    margin-bottom: 2rem;
+}
 
 
 
@@ -607,6 +609,7 @@ body {
 }
 
 
+
 .cont_spinner {
     height: 100%;
     width: 100%;
@@ -750,7 +753,18 @@ textarea:focus {
     display: flex;
     align-items: start;
     justify-content: start;
+
+    cursor: pointer;
+
+    transition: all 0.5s;
 }
+
+.cont_pfp_usuario_tabla:hover{
+     background-color: rgb(75, 75, 75);
+
+}
+
+
 .replie{
     width: 80%;
     border: 3px solid #76BDFE;

@@ -10,9 +10,7 @@
         <a href="/download" class="opt_navbar">
             <p class="text_navbar">DOWNLOAD</p>
         </a>
-        <a href="/store" class="opt_navbar">
-            <p class="text_navbar">STORE</p>
-        </a>
+
 
 
         <a class="pfp_navbar" href="/perfil">

@@ -26,15 +26,11 @@
                     <h4>ABOUT ME</h4>
                     <p>{{$user->bio}}</p>
                     
-                    <div class="edit_button">
-                        <img src="{{asset('/assets/edit.svg')}}" alt="">
-            
-                    </div>
                 </div>
             </div>
 
         <div class="cont_tabla_perfil">
-            <h3 class="title_tabla_perfil">ULTIMOS INTENTOS</h3>
+            <h3>ULTIMOS INTENTOS</h3>
 
             <div class="tabla">
                 <div class="titulos_tabla">

@@ -88,7 +88,7 @@ function getData(url) {
                         <div class="col-2">
                             <h2 class="num_top" >${top_iterator}</h2>
                         </div>
-                        <div class="col-4 cont_pfp_usuario_tabla" >
+                        <div onclick="changeUrl('/perfil/${item.user.username}')" class="col-4 cont_pfp_usuario_tabla" >
                             <img class="img_intento" src="${item.user.pfp}" alt="">
                             <p>${item.user.username}</p>
                         </div>
@@ -182,3 +182,12 @@ function formatearFecha(fechaIso) {
 
     return `${dia}/${mes}/${anio}`;
 }
+
+
+function changeUrl(url){
+    window.location = window.origin + url;
+}
+
+
+
+

@@ -33,6 +33,7 @@ Route::get('/csrf-token', function (Request $request) {
 Route::middleware('auth')->group(function() {
     // VISTAS
     Route::get('/perfil', [WebCommonController::class , 'viewPerfil']);
+    Route::get('/perfil/{username}', [WebCommonController::class , 'viewPerfilPublic']);
     Route::get('/download', [WebCommonController::class , 'viewDownload']);
     Route::get('/', [WebCommonController::class , 'viewHome'])->name('home');
     Route::get('/levels', [WebCommonController::class , 'viewLevels'])->name('levels');
