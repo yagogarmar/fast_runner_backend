@@ -40,11 +40,12 @@ function getRecord() {
         .then(data => {
             console.log("RECORD: ")
             console.log(data);
-
             usernameRecord.innerText = data.data.user.username;
             timeRecord.innerText = formatearTiempo(data.data.time);
             fecha_record.innerText = formatearFecha(data.data.created_at);
             pfp_record.src = data.data.user.pfp;
+            pfp_record.setAttribute("onclick", `changeUrl("/perfil/${data.data.user.username}")`);
+
         })
         .catch(error => console.error("Error:", error));
 }

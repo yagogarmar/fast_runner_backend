@@ -12,26 +12,29 @@
 
     <div class="cont_perfil_global">
         <div class="cont_info_perfil">
+            <img class="pfp_perfil" onclick="update_pfp()" src="{{$user->pfp}}" alt="">
+            <div class="mensaje_edit">
+                <img src="{{asset('/assets/edit.svg')}}" alt="">
+                <p>Pulsa para subir una foto</p>
+            </div>
+            <div class="info_perfil">
+                <h1 class="usernmae_perfil">{{'@'.$user->username}}</h1>
 
-                <img class="pfp_perfil" onclick="update_pfp()" src="{{$user->pfp}}" alt="">
-                <div class="mensaje_edit">
-                    <img src="{{asset('/assets/edit.svg')}}" alt="">
-                    <p>Pulsa para subir una foto</p>
-                </div>
-                <div class="info_perfil">
-                    <h1 class="usernmae_perfil">{{'@'.$user->username}}</h1>
-
-                    <h4>EMAIL</h4>
-                    <p>{{$user->email}}</p>
-                    <h4>ABOUT ME</h4>
-                    <p>{{$user->bio}}</p>
+                <h4>EMAIL</h4>
+                <p>{{$user->email}}</p>
+                <h4>ABOUT ME</h4>
+                <p>{{$user->bio}}</p>
                     
-                    <div class="edit_button">
-                        <img src="{{asset('/assets/edit.svg')}}" alt="">
+                <div class="edit_button">
+                    <img src="{{asset('/assets/edit.svg')}}" alt="">
             
-                    </div>
                 </div>
             </div>
+            <div class="logout_button" onclick="logout()">
+                <img src="{{asset('/assets/logout.svg')}}" alt="">
+            
+            </div>
+        </div>
 
         <div class="cont_tabla_perfil">
             <h3 class="title_tabla_perfil">ULTIMOS INTENTOS</h3>

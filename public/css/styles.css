@@ -221,6 +221,9 @@ body {
     align-items: center;
     padding-top: 1rem;
 
+    position: relative;
+
+    min-width: 270px;
 }
 
 .pfp_perfil{
@@ -285,6 +288,27 @@ body {
     height: 2rem;
 }
 
+.logout_button{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 3rem;
+    width: 3rem;
+
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.logout_button:hover{
+    scale: 1.1;
+}
+
+.logout_button img{
+    height: 2.6rem;
+
+}
+
+
 .yes{
     color: rgb(0, 216, 0);
 }
@@ -327,7 +351,9 @@ body {
     background-color: rgb(75, 75, 75);
 }
 
-
+.fila div *{
+    margin: 0;
+}
 
 
 
@@ -430,6 +456,12 @@ body {
     width: 10vw;
     margin-top: 1rem;
     margin-bottom: 0.6rem;
+
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.record img:hover {
+    scale: 1.1;
 }
 
 .time_record {
@@ -547,12 +579,16 @@ body {
     justify-content: center;
 
     gap: 0.6rem;
-
 }
 
 .paginador div {
     cursor: pointer;
+    transition: all 0.3s;
 
+}
+
+.paginador div:hover{
+    scale: 1.08;
 }
 
 .paginador div img {

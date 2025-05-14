@@ -84,7 +84,7 @@ function getData(url) {
             data.data.data.forEach(item => {
                 top_iterator++;
 
-            const completed = item?.completed ? "<h3 class='yes'>YES</h3>" : "<h3>NO</h3>";
+            const completed = item?.completed ? "<h4 class='yes'>YES</h4>" : "<h4>NO</h4>";
 
 
                 const estructura = `
@@ -93,10 +93,10 @@ function getData(url) {
                             <h5>${item.level.name}</h5>
                         </div>
                         <div class="col-3">
-                            <h3>${formatearTiempo(item.time)}</h3>
+                            <h4>${formatearTiempo(item.time)}</h4>
                         </div>
                         <div class="col-4">
-                            <h3>${formatearFecha(item.created_at)}</h3>
+                            <h4>${formatearFecha(item.created_at)}</h4>
                         </div>
                         <div class="col-3">
                             ${completed}
@@ -196,3 +196,24 @@ function changeUrl(url){
 
 
 
+function logout(){
+        fetch('/logout', {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error(`Error en la respuesta: ${response.status} ${response.statusText}`);
+            }
+        })
+        .then(data => {
+            console.log(data);
+            window.location = window.origin;
+
+        })
+        .catch(error => console.error("Error:", error));
+}
