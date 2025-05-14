@@ -60,7 +60,7 @@ class TimesController extends Controller
     public function getTimesUser(Request $request){
         $user = $request->user();
 
-        $times = $user->times()->with('level')->where('completed', 1)->paginate(5);
+        $times = $user->times()->with('level')->where('completed', 1)->orderBy('created_at', 'desc')->paginate(5);
 
         return response()->json([
             "data" => $times
