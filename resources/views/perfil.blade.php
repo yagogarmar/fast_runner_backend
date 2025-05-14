@@ -4,6 +4,18 @@
 @section('content')
 
 <body>
+
+    <div id="cont_edit_inputs" class="cont_edit_inputs">
+        <div class="cerrar_div">
+
+        </div>
+        <div class="edit_inputs">
+
+        </div>
+    </div>
+
+
+
     <x-navbar :user="$user" />
 
     <div class="marquee">
@@ -25,7 +37,7 @@
                 <h4>ABOUT ME</h4>
                 <p>{{$user->bio}}</p>
                     
-                <div class="edit_button">
+                <div onclick="showEditInputs()" class="edit_button">
                     <img src="{{asset('/assets/edit.svg')}}" alt="">
             
                 </div>

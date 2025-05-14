@@ -10,23 +10,27 @@
         <h1>FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER FAST RUNNER</h1>
     </div>
 
-    <div class="cont_ranking_global">
-        <div>
-            <h1>RANKING GLOBAL</h1>
+    <div class="cont_padre_levels">
+        <div class="cont_levels">   
+            @foreach ($levels as $level)
+                <div class="level">
+                    <a href="levels/{{$level->id}}" class="level_url">
+                        <p>
+                            {{$level->name}}
+                        </p>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+
+        <div class="cont_ranking_global">
+            <div>
+                <h2>RANKING GLOBAL</h2>
+            </div>
         </div>
     </div>
 
-    <div class="cont_levels">   
-        @foreach ($levels as $level)
-            <div class="level">
-                <a href="levels/{{$level->id}}" class="level_url">
-                    <p>
-                        {{$level->name}}
-                    </p>
-                </a>
-            </div>
-        @endforeach
-    </div>
+
 
 </body>
 

@@ -1,5 +1,6 @@
 const foto_pfp = document.getElementById('foto_pfp');
 
+const cont_edit_inputs = document.getElementById('cont_edit_inputs');
 
 const numLevel = window.location.pathname.split('/')[2];
 const cont_filas = document.getElementById('filas');
@@ -216,4 +217,10 @@ function logout(){
 
         })
         .catch(error => console.error("Error:", error));
+}
+
+
+
+function showEditInputs(){
+    cont_edit_inputs.style.visibility = "visible"
 }
