@@ -69,5 +69,14 @@ class WebCommonController extends Controller
 
         return view('user', compact('user', 'userSearch'));
     } 
+
+    public function viewGlobal(Request $request ){
+        $user = $request->user();
+
+    
+
+        return view('global', compact('user'));
+    } 
+
 }
 

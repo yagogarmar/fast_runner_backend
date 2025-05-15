@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/', [WebCommonController::class , 'viewHome'])->name('home');
     Route::get('/levels', [WebCommonController::class , 'viewLevels'])->name('levels');
     Route::get('/levels/{id}',[WebCommonController::class , 'viewLevel']);
+    Route::get('/ranking/global',[WebCommonController::class , 'viewGlobal']);
 
 
     Route::get('/user/{useranme}',[WebCommonController::class , 'viewUser']);
