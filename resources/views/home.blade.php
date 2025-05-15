@@ -1,6 +1,6 @@
 
 @extends('layouts.app')
-@section('title', 'Login')
+@section('title', 'FasrRunner - Home')
 @section('content')
 
 <body>

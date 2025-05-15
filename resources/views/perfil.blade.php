@@ -1,6 +1,6 @@
 
 @extends('layouts.app')
-@section('title', 'Levels')
+@section('title', 'FastRunner - Perfil')
 @section('content')
 
 <body>

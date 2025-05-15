@@ -1,6 +1,6 @@
 
 @extends('layouts.app')
-@section('title', 'Levels')
+@section('title', 'FasrRunner - Levels')
 @section('content')
 
 <body>
