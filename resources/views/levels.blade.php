@@ -24,7 +24,7 @@
         </div>
 
         <div class="cont_ranking_global">
-            <div>
+            <div onclick="changeUrl('/ranking/global')">
                 <h2>RANKING GLOBAL</h2>
             </div>
         </div>
@@ -33,7 +33,11 @@
 
 
 </body>
-
+<script>    
+    function changeUrl(url){
+        window.location = window.origin + url;
+    }
+</script>
 <script src="{{ asset('js/marquee.js') }}"></script>
 
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GlobalRanking;
 use Illuminate\Http\Request;
 use App\Models\Level;
 use App\Models\User;
@@ -73,9 +74,11 @@ class WebCommonController extends Controller
     public function viewGlobal(Request $request ){
         $user = $request->user();
 
-    
+        $top3 = GlobalRanking::orderBy('media_zscore', 'asc')->take(3)->get();
 
-        return view('global', compact('user'));
+    
+        
+        return view('global', compact('user', 'top3'));
     } 
 
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GlobalRanking;
 use App\Models\Time;
 use Illuminate\Http\Request;
 
@@ -66,6 +67,18 @@ class TimesController extends Controller
             "data" => $times
         ]);
 
+    }
+
+    public function getGlobal(){
+        $global = GlobalRanking::orderBy('media_zscore', 'asc')->paginate(5);
+        $max = GlobalRanking::max('media_zscore');
+        $min = GlobalRanking::min('media_zscore');
+
+        return response()->json([
+            "data"=> $global,
+            "max" => $max,
+            "min" => $min
+        ]);
     }
 
     

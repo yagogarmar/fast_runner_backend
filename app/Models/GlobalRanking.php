@@ -10,7 +10,7 @@ class GlobalRanking extends Model
     protected $fillable = ['user_id', 'media_zscore', 'posicion'];
 
 
-
+    protected $with = ['user'];
 
     public function user(): BelongsTo
     {

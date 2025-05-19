@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Comment;
 
 // VISTAS
-Route::get('/login', [WebCommonController::class , 'viewLogin'])->name('login');
-Route::get('/register', [WebCommonController::class , 'viewRegister'])->name('register');
+Route::get('/login',                        [WebCommonController::class , 'viewLogin'])->name('login');
+Route::get('/register',                     [WebCommonController::class , 'viewRegister'])->name('register');
 
 
-Route::post('/login',           [AuthController::class, 'webLogin']);
-Route::post('/register',        [AuthController::class, 'apiRegister']);
+Route::post('/login',                       [AuthController::class, 'webLogin']);
+Route::post('/register',                    [AuthController::class, 'apiRegister']);
 
 Route::get('comments', function() {
 
@@ -32,40 +32,42 @@ Route::get('/csrf-token', function (Request $request) {
 
 Route::middleware('auth')->group(function() {
     // VISTAS
-    Route::get('/perfil', [WebCommonController::class , 'viewPerfil']);
-    Route::get('/perfil/{username}', [WebCommonController::class , 'viewPerfilPublic']);
-    Route::get('/download', [WebCommonController::class , 'viewDownload']);
-    Route::get('/', [WebCommonController::class , 'viewHome'])->name('home');
-    Route::get('/levels', [WebCommonController::class , 'viewLevels'])->name('levels');
-    Route::get('/levels/{id}',[WebCommonController::class , 'viewLevel']);
-    Route::get('/ranking/global',[WebCommonController::class , 'viewGlobal']);
+    Route::get('/perfil',                   [WebCommonController::class , 'viewPerfil']);
+    Route::get('/perfil/{username}',        [WebCommonController::class , 'viewPerfilPublic']);
+    Route::get('/download',                 [WebCommonController::class , 'viewDownload']);
+    Route::get('/',                         [WebCommonController::class , 'viewHome'])->name('home');
+    Route::get('/levels',                   [WebCommonController::class , 'viewLevels'])->name('levels');
+    Route::get('/levels/{id}',              [WebCommonController::class , 'viewLevel']);
+    Route::get('/ranking/global',           [WebCommonController::class , 'viewGlobal']);
 
 
-    Route::get('/user/{useranme}',[WebCommonController::class , 'viewUser']);
+    Route::get('/user/{useranme}',          [WebCommonController::class , 'viewUser']);
 
 
 
-    Route::post('/perfil/foto', [AuthController::class, 'subirFoto']);
-    Route::any('/logout', [AuthController::class, 'webLogout']);
+    Route::post('/perfil/foto',             [AuthController::class, 'subirFoto']);
+    Route::any('/logout',                   [AuthController::class, 'webLogout']);
 
-    Route::post('/comment',           [LevelsController::class, 'comment']);
+    Route::post('/comment',                 [LevelsController::class, 'comment']);
 
     Route::group(['prefix' => 'store'], function () {
-        Route::get('/products',          [StoreController::class, 'get'] );
-        Route::get('/products/{id}',          [StoreController::class, 'show'] );
-        Route::get('/buy/{id}',          [StoreController::class, 'buy'] );
+        Route::get('/products',             [StoreController::class, 'get'] );
+        Route::get('/products/{id}',        [StoreController::class, 'show'] );
+        Route::get('/buy/{id}',             [StoreController::class, 'buy'] );
     });
 
 
  
-    Route::get('/level',            [LevelsController::class , 'get']);
-    Route::get('/level/{id}',       [LevelsController::class , 'show']);
+    Route::get('/level',                    [LevelsController::class , 'get']);
+    Route::get('/level/{id}',               [LevelsController::class , 'show']);
     
     Route::group(['prefix' => 'time'], function () {
-        Route::get('/get/{id}',          [TimesController::class, 'get'] );
+        Route::get('/get/{id}',             [TimesController::class, 'get'] );
         Route::get('/record/{id}',          [TimesController::class, 'getRecord'] );
-        Route::get('/user',          [TimesController::class, 'getTimesUser'] );
+        Route::get('/user',                 [TimesController::class, 'getTimesUser'] );
     });
+
+    Route::get('/global',                   [TimesController::class, 'getGlobal']);
 });
 
 

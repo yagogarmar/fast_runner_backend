@@ -423,6 +423,12 @@ body {
     padding: 1rem;
     background: linear-gradient(45deg, #76BDFF, #76D6FF);
     border-radius: 1rem;
+    height: 20%;
+    min-width: 4rem;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 0;
+    padding-top: 0;
 
     display: flex;
     align-items: center;
@@ -982,4 +988,135 @@ textarea:focus {
     text-transform: uppercase;
 
 
+}
+
+
+
+/* RANKING GLOBAL */
+
+.cont_podio{
+    height: calc(100vh - 8.4rem);
+
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+
+}
+
+.top1{
+
+    border-radius: 10px 10px 0 0 ;
+    background: linear-gradient(45deg, #76BDFF, #76D6FF);
+
+    height: calc(95vh - 9rem) ;
+    width: 20vw;
+    z-index: 3;
+    box-shadow:     
+    -5px 0 30px -2px rgba(0, 0, 0, 0.3),  /* sombra izquierda */
+     5px 0 30px -2px rgba(0, 0, 0, 0.3);  /* sombra derecha */
+
+    overflow: hidden;
+
+    animation: subirDesdeAbajo80 0.5s ease forwards;
+
+}
+
+.top2{
+    border-radius: 10px 0 0 0 ;
+
+    height:calc(75vh - 9rem) ;
+    width: 20vw;
+    background: linear-gradient(45deg, #76BDFF, #76D6FF);
+
+    overflow: hidden;
+
+    animation: subirDesdeAbajo75 0.5s ease forwards;
+
+}
+.top3{
+    border-radius: 0 10px 0 0 ;
+    
+    background: linear-gradient(45deg, #76BDFF, #76D6FF);
+    height:calc(65vh - 9rem) ;
+    width: 20vw;
+
+    overflow: hidden;
+
+    animation: subirDesdeAbajo65 0.5s ease forwards;
+
+}
+
+.cont_datos_top{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding-top:  2vh;
+
+}
+
+.cont_datos_top img{
+    border-radius: 100%;
+    aspect-ratio: 1;
+    width: 50%;
+    margin-bottom: 1.5vh;
+    
+}
+
+.cont_datos_top h1{
+    font-size: 2.5vw;
+    font-weight: 600;
+    margin-bottom: 1vh;
+}
+
+.cont_cont_tabla{
+    width: 100%;
+    height: 65vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3vh;
+    padding-top: 7vh;
+
+}
+
+.cont_tabla{
+    width: 75%;
+    height: 100%;
+    position: relative;
+    
+}
+
+
+
+
+
+@keyframes subirDesdeAbajo80 {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(95vh - 9rem);
+  }
+}
+
+@keyframes subirDesdeAbajo75 {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(75vh - 9rem);
+  }
+}
+
+@keyframes subirDesdeAbajo65 {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(65vh - 9rem);
+  }
 }
