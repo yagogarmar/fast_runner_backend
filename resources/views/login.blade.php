@@ -17,6 +17,7 @@
             <h1>LOGIN</h1>
             <input type="text" id="username" class="loginInput" placeholder="USERNAME">
             <input type="password" id="password" class="loginInput" placeholder="PASSWORD">
+            <p class="mensaje_error_login" id="mensaje_error">La contraseña o el usuario son incorrectos</p>
             <button onclick="login()" class="loginButton">CONTINUE</button>
             <a href="/register">
               <button  class="goregisterButton">REGISTER</button>

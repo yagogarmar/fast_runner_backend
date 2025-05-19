@@ -79,6 +79,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+}
+
+.mensaje_error_login{
+    color: rgb(255, 43, 43);
+    font-weight: 600;
+    font-size: 1.2rem;
+    visibility: hidden;
 }
 
 .cont_login h1 {
@@ -120,7 +129,6 @@ body {
     background-color: #76D6FF;
     color: #393939;
     font-family: "Lexend", sans-serif;
-    margin-top: 3rem;
 
     font-size: 1.35rem;
     font-weight: 500;

@@ -1,27 +1,37 @@
 
 const username = document.getElementById("username")
 const password = document.getElementById("password")
+const error = document.getElementById("mensaje_error")
 
 function login() {
     const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 
-    fetch("/login", {
-        method: "POST",
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "X-CSRF-TOKEN": csrfToken
-        },
-        body: JSON.stringify({
-            username: username.value,
-            password: password.value
+    if(username.value && username.value){
+        error.style.visibility = "hidden";
+        fetch("/login", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": csrfToken
+            },
+            body: JSON.stringify({
+                username: username.value,
+                password: password.value
+            })
         })
-    })
         .then(response => {
             if (response.status === 200) {
 
                 return response.json();
             } else {
+                if(response.status == 401){
+                    error.innerText = "La contraseña o el usuario son incorrectos"
+                }else{
+                    error.innerText = "Ha ocurrido un error inesperado"
+                }
+                
+                error.style.visibility = "visible";
                 throw new Error(`Error en la respuesta: ${response.status} ${response.statusText}`);
             }
         })
@@ -30,6 +40,11 @@ function login() {
             console.log(data);
         })
         .catch(error => console.error("Error:", error));
+    }else{
+            error.innerText = "Complete todos dos campos"
+            error.style.visibility = "visible";
+    }
+    
 
 }
 
