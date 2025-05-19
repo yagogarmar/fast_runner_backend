@@ -40,14 +40,16 @@ body {
     background: linear-gradient(45deg, #76BDFF, #76D6FF);
     height: 100%;
 
-    border-radius: 35px;
+    border-radius: 20px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
-
-
+.cont_degradado img {
+    height: 50%;
+    aspect-ratio: 1;
 }
 
 .cont_degradado p {
@@ -89,7 +91,7 @@ body {
     background-color: #575757;
     text-align: center;
     color: WHITE;
-    border-radius: 0.813rem;
+    border-radius: 0.5rem;
     padding: 10px;
 
     width: 25.200rem;
