@@ -223,4 +223,13 @@ function logout(){
 
 function showEditInputs(){
     cont_edit_inputs.style.visibility = "visible"
+    cont_edit_inputs.style.opacity = 1
+}
+
+function hideEditInputs(){
+    cont_edit_inputs.style.opacity = 0
+
+    setTimeout(() => {
+        cont_edit_inputs.style.visibility = "hidden"
+    }, 200);
 }

@@ -380,15 +380,17 @@ body {
     background-color: rgba(0, 0, 0, 0.308);
 
     visibility: hidden;
+    opacity: 0;
     display: flex;
     flex-direction: row;
 
-    transition: all 2s;
+    transition: opacity 0.2s;
     
 }
 .cerrar_div{
     width: 60%;
     height: 100%;
+    cursor: pointer;
 }
 .edit_inputs{
     width: 40%;
@@ -397,6 +399,8 @@ body {
 
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
+
+    position: relative;
 
 }
 
@@ -1079,7 +1083,7 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     margin-bottom: 3vh;
-    padding-top: 7vh;
+    padding-top: 2vh;
 
 }
 
@@ -1090,8 +1094,23 @@ textarea:focus {
     
 }
 
+.info_global{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+}
 
 
+.info_global p{
+    text-align: center;
+    max-width: 70vw;
+}
 
 
 @keyframes subirDesdeAbajo80 {
@@ -1119,4 +1138,118 @@ textarea:focus {
   to {
     height: calc(65vh - 9rem);
   }
+}
+
+
+/* HOME */
+
+.cont_home{
+    height: calc(90vh - 9rem);
+}
+
+.contsec_home{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contsec_home{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contsec_home img{
+    height: 60%;
+    scale: 1;
+}
+
+.contsec_home iframe{
+    height: 80%;
+    width: 100%;
+    aspect-ratio: 6/1;
+}
+
+.cont_info_home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.cont_info_home h4{
+    width: 50%;
+}
+
+.cont_redes{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+}
+
+.cont_redes img{
+    height: 5vw;
+    cursor: pointer;
+}
+.cont_redes img:hover{
+    height: 5vw;
+    cursor: pointer;
+}
+
+/* DOWNLOAD */
+
+.cont_button_download{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button_downloas{
+    background-color: #76BDFF;
+    border: none;
+
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 15px;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    text-decoration: none;
+}
+
+.button_downloas p{
+    margin: 0;
+
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #393939;
+    
+}
+.button_downloas img{
+    
+}
+
+.cont_notas_parche{
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+.cont_notas_parche h1{
+    font-weight: 650;
 }

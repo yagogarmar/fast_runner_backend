@@ -6,11 +6,11 @@
 <body>
 
     <div id="cont_edit_inputs" class="cont_edit_inputs">
-        <div class="cerrar_div">
+        <div onclick="hideEditInputs()" class="cerrar_div">
 
         </div>
         <div class="edit_inputs">
-
+            <div></div>
         </div>
     </div>
 
