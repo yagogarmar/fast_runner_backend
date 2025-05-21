@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LevelsController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TimesController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebCommonController;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
@@ -45,6 +46,7 @@ Route::middleware('auth')->group(function() {
 
 
 
+    Route::post('/perfil/edit',             [UserController::class, 'editUser']);
     Route::post('/perfil/foto',             [AuthController::class, 'subirFoto']);
     Route::any('/logout',                   [AuthController::class, 'webLogout']);
 

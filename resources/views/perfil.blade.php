@@ -28,7 +28,7 @@
                 <h4>EMAIL</h4>
                 <input type="text" name="" id="edit_email" value="{{$user->email}}">
                 <h4>ABOUT ME</h4>
-                <textarea name="" id="edit_bio" cols="30" rows="10" value="{{$user->bio}}"></textarea>
+                <textarea name="" id="edit_bio" cols="30" rows="10" value="">{{$user->bio}}</textarea>
             </div>
         </div>
     </div>

@@ -18,14 +18,16 @@ document.getElementById('pag_5')]
 const edit_username = document.getElementById("edit_username");
 const edit_email = document.getElementById("edit_email");
 const edit_bio = document.getElementById("edit_bio");
+const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 
-update_pfp()
+
 function update_pfp() {
     foto_pfp.click()
 }
+
 foto_pfp.addEventListener('change', async function () {
     console.log('enviar');
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+    
 
     const file = this.files[0];
     if (!file) return;
@@ -240,8 +242,8 @@ function hideEditInputs(){
 
 
 function edit(){
-    return 0;
-     fetch("/perfil/post", {
+    console.log("editando")
+     fetch("/perfil/edit", {
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -251,11 +253,11 @@ function edit(){
             body: JSON.stringify({
                 username: edit_username.value,
                 email: edit_email.value,
-                bio: passwedit_bioord.value
+                bio: edit_bio.value
             })
         })
         .then(response => {
-            if (response.status === 200) {
+            if (response.status === 201) {
 
                 return response.json();
             } else {
@@ -270,8 +272,8 @@ function edit(){
             }
         })
         .then(data => {
-            window.location = window.location.origin;
-            console.log(data);
+            console.log(data)
+            location.reload();
         })
         .catch(error => console.error("Error:", error));
 

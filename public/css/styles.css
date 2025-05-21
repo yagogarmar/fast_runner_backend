@@ -379,8 +379,8 @@ body {
 
     background-color: rgba(0, 0, 0, 0.308);
 
-   /* visibility: hidden;
-    opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
     display: flex;
     flex-direction: row;
 
