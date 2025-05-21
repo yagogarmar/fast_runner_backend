@@ -14,10 +14,22 @@
 
 <script src="{{ asset('js/marquee.js') }}"></script>
 <div class="cont_button_download">
-    <a href="{{asset('/files/unnamed.jpg')}}" download  class="button_downloas">
-        <img src="{{asset('/assets/DOWN.svg')}}" alt="">
-        <p>DOWNLAOD</p>
-    </a>
+    <div class="cont_down_but">
+        <img class="img_sisteMA" src="{{asset('/assets/linux.png')}}" alt="">
+        <a href="{{asset('/files/Fast_Runner_linux.zip')}}" download  class="button_downloas">
+            <img src="{{asset('/assets/DOWN.svg')}}" alt="">
+            <p>DOWNLAOD</p>
+        </a>
+    </div>
+
+    <div class="cont_down_but">
+        <img class="img_sisteMA" src="{{asset('/assets/win.png')}}" alt="">
+        <a href="{{asset('/files/Fast_Runner_windows.zip')}}" download  class="button_downloas">
+            <img src="{{asset('/assets/DOWN.svg')}}" alt="">
+            <p>DOWNLAOD</p>
+        </a>
+    </div>
+
 </div>
 <div class="cont_notas_parche">
     <h1>VERSIÓN 0.1</h1>

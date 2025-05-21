@@ -10,7 +10,26 @@
 
         </div>
         <div class="edit_inputs">
-            <div></div>
+            <div onclick="hideEditInputs()" class="button_cerrar">
+                <img src="{{asset('/assets/cerrar.svg')}}" alt="">
+            </div>
+            <div onclick="edit()" class="button_guardar">
+                <img src="{{asset('/assets/check.svg')}}" alt="">
+                <h5>GUARDAR</h5>
+            </div>
+
+            <div class="cont_title_edir_perfil">
+                <h2>EDITA TU PERFIL</h2>
+            </div>
+
+            <div class="cont_inputs">
+                <h4>USERNAME</h4>
+                <input type="text" name="" id="edit_username" value="{{$user->username}}">
+                <h4>EMAIL</h4>
+                <input type="text" name="" id="edit_email" value="{{$user->email}}">
+                <h4>ABOUT ME</h4>
+                <textarea name="" id="edit_bio" cols="30" rows="10" value="{{$user->bio}}"></textarea>
+            </div>
         </div>
     </div>
 

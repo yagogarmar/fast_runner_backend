@@ -15,6 +15,9 @@ document.getElementById('pag_2'),
 document.getElementById('pag_3'),
 document.getElementById('pag_4'),
 document.getElementById('pag_5')] 
+const edit_username = document.getElementById("edit_username");
+const edit_email = document.getElementById("edit_email");
+const edit_bio = document.getElementById("edit_bio");
 
 update_pfp()
 function update_pfp() {
@@ -232,4 +235,44 @@ function hideEditInputs(){
     setTimeout(() => {
         cont_edit_inputs.style.visibility = "hidden"
     }, 200);
+}
+
+
+
+function edit(){
+    return 0;
+     fetch("/perfil/post", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": csrfToken
+            },
+            body: JSON.stringify({
+                username: edit_username.value,
+                email: edit_email.value,
+                bio: passwedit_bioord.value
+            })
+        })
+        .then(response => {
+            if (response.status === 200) {
+
+                return response.json();
+            } else {
+                if(response.status == 401){
+                    error.innerText = "La contraseña o el usuario son incorrectos"
+                }else{
+                    error.innerText = "Ha ocurrido un error inesperado"
+                }
+                
+                error.style.visibility = "visible";
+                throw new Error(`Error en la respuesta: ${response.status} ${response.statusText}`);
+            }
+        })
+        .then(data => {
+            window.location = window.location.origin;
+            console.log(data);
+        })
+        .catch(error => console.error("Error:", error));
+
 }
