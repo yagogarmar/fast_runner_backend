@@ -1,3 +1,4 @@
+
 const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 const text_area_comment = document.getElementById("text_area_comment");
 const cont_comentarios = document.getElementById("comentarios");

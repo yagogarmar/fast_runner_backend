@@ -21,3 +21,4 @@ Route::group(['middleware' => 'api.key'], function() {
     });
 });
 
+Route::post('/time', [TimesController::class, 'newTime'])->middleware('api.key');

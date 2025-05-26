@@ -10,15 +10,8 @@
         <a href="/download" class="opt_navbar">
             <p class="text_navbar">DOWNLOAD</p>
         </a>
-
-
-
         <a class="pfp_navbar" href="/perfil">
             <img src="{{ $user->pfp }}" alt="">
-
         </a>
     </div>
-
-
-
 </div>

@@ -164,7 +164,7 @@ body {
     width: 100%;
     background: linear-gradient(45deg, #76BDFF, #76D6FF);
 
-    border-radius: 20px;
+    border-radius: 15px;
 
     display: flex;
     flex-direction: row;
@@ -538,6 +538,8 @@ body {
 }
 .cont_ranking_global div h2{
     margin: 0;
+    font-size: 3vw;
+    font-weight: 600;
 
 }
 .cont_levels {
